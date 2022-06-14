@@ -1,0 +1,6 @@
+framework module Pods_CarReceiver {
+  umbrella header "Pods-CarReceiver-umbrella.h"
+
+  export *
+  module * { export * }
+}

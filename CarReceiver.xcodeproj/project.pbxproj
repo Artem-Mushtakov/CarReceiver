@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AC9EF35DE83FCB256C0FF8A /* Pods_CarReceiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2208AAF5ECA7E201C4532880 /* Pods_CarReceiver.framework */; };
 		ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532C28591C210069C031 /* AppDelegate.swift */; };
 		ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532E28591C210069C031 /* SceneDelegate.swift */; };
 		ACE9533128591C210069C031 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9533028591C210069C031 /* ViewController.swift */; };
 		ACE9533628591C230069C031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE9533528591C230069C031 /* Assets.xcassets */; };
 		ACE9533928591C230069C031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE9533728591C230069C031 /* LaunchScreen.storyboard */; };
+		ACE95346285924920069C031 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ACE95345285924920069C031 /* RxCocoa */; };
+		ACE95348285924920069C031 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACE95347285924920069C031 /* RxSwift */; };
+		ACE9534B285924AD0069C031 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ACE9534A285924AD0069C031 /* SnapKit */; };
+		ACE9534E285925070069C031 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = ACE9534D285925070069C031 /* Then */; };
+		ACE953602859333A0069C031 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9535F2859333A0069C031 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2208AAF5ECA7E201C4532880 /* Pods_CarReceiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarReceiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37E758E1AFD4F7F8A164197B /* Pods-CarReceiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarReceiver.release.xcconfig"; path = "Target Support Files/Pods-CarReceiver/Pods-CarReceiver.release.xcconfig"; sourceTree = "<group>"; };
+		7F9FB5ECD1D8248C5D1A2A55 /* Pods-CarReceiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarReceiver.debug.xcconfig"; path = "Target Support Files/Pods-CarReceiver/Pods-CarReceiver.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE9532928591C210069C031 /* CarReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE9532C28591C210069C031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE9532E28591C210069C031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +31,7 @@
 		ACE9533528591C230069C031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACE9533828591C230069C031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACE9533A28591C230069C031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACE9535F2859333A0069C031 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE9534B285924AD0069C031 /* SnapKit in Frameworks */,
+				ACE95348285924920069C031 /* RxSwift in Frameworks */,
+				ACE95346285924920069C031 /* RxCocoa in Frameworks */,
+				ACE9534E285925070069C031 /* Then in Frameworks */,
+				5AC9EF35DE83FCB256C0FF8A /* Pods_CarReceiver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38A3508D676F0E826A3A99A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F9FB5ECD1D8248C5D1A2A55 /* Pods-CarReceiver.debug.xcconfig */,
+				37E758E1AFD4F7F8A164197B /* Pods-CarReceiver.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		773A39BD963F2847599A144C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2208AAF5ECA7E201C4532880 /* Pods_CarReceiver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ACE9532028591C210069C031 = {
 			isa = PBXGroup;
 			children = (
 				ACE9532B28591C210069C031 /* CarReceiver */,
 				ACE9532A28591C210069C031 /* Products */,
+				38A3508D676F0E826A3A99A8 /* Pods */,
+				773A39BD963F2847599A144C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,24 +88,17 @@
 		ACE9532B28591C210069C031 /* CarReceiver */ = {
 			isa = PBXGroup;
 			children = (
-				ACE9534028591EC00069C031 /* Sources */,
+				ACE9534228591EE20069C031 /* App */,
+				ACE9534328591EE80069C031 /* Scenes */,
 				ACE9534128591EC90069C031 /* Resources */,
 			);
 			path = CarReceiver;
 			sourceTree = "<group>";
 		};
-		ACE9534028591EC00069C031 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				ACE9534228591EE20069C031 /* App */,
-				ACE9534328591EE80069C031 /* Scenes */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		ACE9534128591EC90069C031 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACE9535C285933030069C031 /* Generated */,
 				ACE9533528591C230069C031 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -96,6 +123,14 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		ACE9535C285933030069C031 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				ACE9535F2859333A0069C031 /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,15 +138,24 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACE9533D28591C230069C031 /* Build configuration list for PBXNativeTarget "CarReceiver" */;
 			buildPhases = (
+				914BE0BC59CC977BF9DA825E /* [CP] Check Pods Manifest.lock */,
+				ACE9535B285930AD0069C031 /* R.Swift */,
 				ACE9532528591C210069C031 /* Sources */,
 				ACE9532628591C210069C031 /* Frameworks */,
 				ACE9532728591C210069C031 /* Resources */,
+				539C6BF5E66582A3D72D67C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CarReceiver;
+			packageProductDependencies = (
+				ACE95345285924920069C031 /* RxCocoa */,
+				ACE95347285924920069C031 /* RxSwift */,
+				ACE9534A285924AD0069C031 /* SnapKit */,
+				ACE9534D285925070069C031 /* Then */,
+			);
 			productName = CarReceiver;
 			productReference = ACE9532928591C210069C031 /* CarReceiver.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +184,11 @@
 				Base,
 			);
 			mainGroup = ACE9532028591C210069C031;
+			packageReferences = (
+				ACE95344285924920069C031 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				ACE95349285924AD0069C031 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				ACE9534C285925070069C031 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = ACE9532A28591C210069C031 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,6 +210,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		539C6BF5E66582A3D72D67C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarReceiver/Pods-CarReceiver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarReceiver/Pods-CarReceiver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarReceiver/Pods-CarReceiver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		914BE0BC59CC977BF9DA825E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarReceiver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACE9535B285930AD0069C031 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/CarReceiver/Resources/Generated/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/CarReceiver/Resources/Generated/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ACE9532528591C210069C031 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -168,6 +279,7 @@
 			files = (
 				ACE9533128591C210069C031 /* ViewController.swift in Sources */,
 				ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */,
+				ACE953602859333A0069C031 /* R.generated.swift in Sources */,
 				ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,16 +414,19 @@
 		};
 		ACE9533E28591C230069C031 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F9FB5ECD1D8248C5D1A2A55 /* Pods-CarReceiver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4RDHS5RHMF;
+				DEVELOPMENT_TEAM = 8F65V3YM64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CarReceiver/Sources/App/Info.plist;
+				INFOPLIST_FILE = CarReceiver/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CarReceiver;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,7 +434,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.myCarReceiver.CarReceiver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCarReceiver.CarReceiver.my;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -329,16 +444,19 @@
 		};
 		ACE9533F28591C230069C031 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37E758E1AFD4F7F8A164197B /* Pods-CarReceiver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4RDHS5RHMF;
+				DEVELOPMENT_TEAM = 8F65V3YM64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CarReceiver/Sources/App/Info.plist;
+				INFOPLIST_FILE = CarReceiver/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CarReceiver;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,7 +464,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.myCarReceiver.CarReceiver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCarReceiver.CarReceiver.my;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -376,6 +494,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACE95344285924920069C031 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		ACE95349285924AD0069C031 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		ACE9534C285925070069C031 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACE95345285924920069C031 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE95344285924920069C031 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		ACE95347285924920069C031 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE95344285924920069C031 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		ACE9534A285924AD0069C031 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE95349285924AD0069C031 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		ACE9534D285925070069C031 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE9534C285925070069C031 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACE9532128591C210069C031 /* Project object */;
 }
