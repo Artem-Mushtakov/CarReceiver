@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5AC9EF35DE83FCB256C0FF8A /* Pods_CarReceiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2208AAF5ECA7E201C4532880 /* Pods_CarReceiver.framework */; };
+		AC9FBBCC285A7326006AF720 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */; };
 		ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532C28591C210069C031 /* AppDelegate.swift */; };
 		ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532E28591C210069C031 /* SceneDelegate.swift */; };
-		ACE9533128591C210069C031 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9533028591C210069C031 /* ViewController.swift */; };
+		ACE9533128591C210069C031 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9533028591C210069C031 /* LoginViewController.swift */; };
 		ACE9533628591C230069C031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE9533528591C230069C031 /* Assets.xcassets */; };
 		ACE9533928591C230069C031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE9533728591C230069C031 /* LaunchScreen.storyboard */; };
 		ACE95346285924920069C031 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ACE95345285924920069C031 /* RxCocoa */; };
@@ -24,10 +25,11 @@
 		2208AAF5ECA7E201C4532880 /* Pods_CarReceiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarReceiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E758E1AFD4F7F8A164197B /* Pods-CarReceiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarReceiver.release.xcconfig"; path = "Target Support Files/Pods-CarReceiver/Pods-CarReceiver.release.xcconfig"; sourceTree = "<group>"; };
 		7F9FB5ECD1D8248C5D1A2A55 /* Pods-CarReceiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarReceiver.debug.xcconfig"; path = "Target Support Files/Pods-CarReceiver/Pods-CarReceiver.debug.xcconfig"; sourceTree = "<group>"; };
+		AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ACE9532928591C210069C031 /* CarReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE9532C28591C210069C031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE9532E28591C210069C031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACE9533028591C210069C031 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACE9533028591C210069C031 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACE9533528591C230069C031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACE9533828591C230069C031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACE9533A28591C230069C031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +69,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC9FBBCD285A7330006AF720 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ACE9533028591C210069C031 /* LoginViewController.swift */,
+				AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		ACE9532028591C210069C031 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE9534228591EE20069C031 /* App */,
+				ACE953612859A08D0069C031 /* Base+Extensions */,
 				ACE9534328591EE80069C031 /* Scenes */,
 				ACE9534128591EC90069C031 /* Resources */,
 			);
@@ -118,7 +130,7 @@
 		ACE9534328591EE80069C031 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				ACE9533028591C210069C031 /* ViewController.swift */,
+				AC9FBBCD285A7330006AF720 /* Login */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -129,6 +141,13 @@
 				ACE9535F2859333A0069C031 /* R.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		ACE953612859A08D0069C031 /* Base+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Base+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACE9533128591C210069C031 /* ViewController.swift in Sources */,
+				ACE9533128591C210069C031 /* LoginViewController.swift in Sources */,
 				ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */,
 				ACE953602859333A0069C031 /* R.generated.swift in Sources */,
+				AC9FBBCC285A7326006AF720 /* LoginViewModel.swift in Sources */,
 				ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
