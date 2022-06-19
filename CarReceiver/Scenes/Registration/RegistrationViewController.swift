@@ -1,18 +1,16 @@
 //
-//  LoginViewController.swift
+//  RegistrationViewController.swift
 //  CarReceiver
 //
-//  Created by Artem Mushtakov on 14.06.2022.
+//  Created by Artem Mushtakov on 19.06.2022.
 //
 
+import Foundation
 import UIKit
-import Rswift
 import RxCocoa
 import RxSwift
-import Then
-import SnapKit
 
-class LoginViewController: UIViewController {
+class RegistrationViewController: UIViewController {
 
     // MARK: - Lifecycle
 
@@ -24,7 +22,7 @@ class LoginViewController: UIViewController {
     // MARK: - Setup view
 
     private func setupView() {
-        title = "Вход"
+        title = "Регистация"
         view.backgroundColor = .white
         addSubviews()
         setupNavigationController()
@@ -55,7 +53,13 @@ class LoginViewController: UIViewController {
     }
 
     private lazy var loginTextField = CustomTextField(false).then {
-        $0.placeholder = "Введите логин"
+        $0.placeholder = "Введите логин или email"
+        $0.font = R.font.nunitoRegular(size: 14)
+        $0.tintColor = .lightGray
+    }
+
+    private lazy var organizationNameTextField = CustomTextField(false).then {
+        $0.placeholder = "Название организации"
         $0.font = R.font.nunitoRegular(size: 14)
         $0.tintColor = .lightGray
     }
@@ -66,22 +70,21 @@ class LoginViewController: UIViewController {
         $0.tintColor = .gray
     }
 
-    private lazy var resetPassword = UIButton().then {
-        $0.setTitle("Забыли пароль?", for: .normal)
-        $0.titleLabel?.font = R.font.nunitoBold(size: 17)
-        $0.setTitleColor(.black, for: .normal)
-        $0.addTarget(self, action: #selector(openModuleResetPassword), for: .touchUpInside)
+    private lazy var repeatThePassword = CustomTextField(true).then {
+        $0.placeholder = "Повторите ввод пароля"
+        $0.font = R.font.nunitoRegular(size: 14)
+        $0.tintColor = .gray
     }
-    
-    private lazy var loginButton = UIButton(type: .system).then {
-        $0.setTitle("Войти", for: .normal)
+
+    private lazy var registerButton = UIButton(type: .system).then {
+        $0.setTitle("Зарегистрироваться", for: .normal)
         $0.titleLabel?.font = R.font.nunitoBold(size: 18)
         $0.setTitleColor(.black, for: .normal)
         $0.backgroundColor = .white
         $0.layer.cornerRadius = 12
         $0.layer.borderColor = R.color.borderOrange()?.cgColor
         $0.layer.borderWidth = 2
-        $0.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
     }
 
     // MARK: - Setup Layout
@@ -90,9 +93,10 @@ class LoginViewController: UIViewController {
         view.addSubview(contentView)
         view.addSubview(logoImageView)
         view.addSubview(loginTextField)
+        view.addSubview(organizationNameTextField)
         view.addSubview(passwordTextField)
-        view.addSubview(resetPassword)
-        view.addSubview(loginButton)
+        view.addSubview(repeatThePassword)
+        view.addSubview(registerButton)
     }
 
     private func setupLayout() {
@@ -113,33 +117,36 @@ class LoginViewController: UIViewController {
             $0.height.equalTo(40)
         }
 
-        passwordTextField.snp.makeConstraints {
+        organizationNameTextField.snp.makeConstraints {
             $0.top.equalTo(loginTextField.snp.bottom).offset(20)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(40)
         }
 
-        resetPassword.snp.makeConstraints {
-            $0.top.equalTo(passwordTextField.snp.bottom).offset(20)
-            $0.leading.equalTo(20)
-            $0.trailing.equalTo(-20)
-            $0.height.equalTo(20)
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(organizationNameTextField.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.height.equalTo(40)
         }
-        
-        loginButton.snp.makeConstraints {
-            $0.top.equalTo(resetPassword.snp.bottom).offset(20)
+
+        repeatThePassword.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.height.equalTo(40)
+        }
+
+        registerButton.snp.makeConstraints {
+            $0.top.equalTo(repeatThePassword.snp.bottom).offset(20)
             $0.width.equalTo(view.frame.width * 0.5)
             $0.height.equalTo(view.frame.height * 0.06)
             $0.centerX.equalTo(view.snp.centerX)
         }
     }
 
-    @objc private func openModuleResetPassword() {
-        print("Open reset password")
-    }
-    
-    @objc private func loginButtonTapped() {
+    @objc private func registerButtonTapped() {
         print(#function)
     }
 }

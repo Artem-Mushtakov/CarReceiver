@@ -1,18 +1,13 @@
 //
-//  LoginViewController.swift
+//  StartViewController.swift
 //  CarReceiver
 //
-//  Created by Artem Mushtakov on 14.06.2022.
+//  Created by Artem Mushtakov on 19.06.2022.
 //
 
 import UIKit
-import Rswift
-import RxCocoa
-import RxSwift
-import Then
-import SnapKit
 
-class LoginViewController: UIViewController {
+class StartViewController: UIViewController {
 
     // MARK: - Lifecycle
 
@@ -24,7 +19,7 @@ class LoginViewController: UIViewController {
     // MARK: - Setup view
 
     private func setupView() {
-        title = "Вход"
+        title = "Добро пожаловать"
         view.backgroundColor = .white
         addSubviews()
         setupNavigationController()
@@ -54,26 +49,7 @@ class LoginViewController: UIViewController {
         $0.tintColor = R.color.orangeColor()?.withAlphaComponent(0.6)
     }
 
-    private lazy var loginTextField = CustomTextField(false).then {
-        $0.placeholder = "Введите логин"
-        $0.font = R.font.nunitoRegular(size: 14)
-        $0.tintColor = .lightGray
-    }
-
-    private lazy var passwordTextField = CustomTextField(true).then {
-        $0.placeholder = "Введите пароль"
-        $0.font = R.font.nunitoRegular(size: 14)
-        $0.tintColor = .gray
-    }
-
-    private lazy var resetPassword = UIButton().then {
-        $0.setTitle("Забыли пароль?", for: .normal)
-        $0.titleLabel?.font = R.font.nunitoBold(size: 17)
-        $0.setTitleColor(.black, for: .normal)
-        $0.addTarget(self, action: #selector(openModuleResetPassword), for: .touchUpInside)
-    }
-    
-    private lazy var loginButton = UIButton(type: .system).then {
+    private lazy var enterLoginButton = UIButton(type: .system).then {
         $0.setTitle("Войти", for: .normal)
         $0.titleLabel?.font = R.font.nunitoBold(size: 18)
         $0.setTitleColor(.black, for: .normal)
@@ -81,7 +57,18 @@ class LoginViewController: UIViewController {
         $0.layer.cornerRadius = 12
         $0.layer.borderColor = R.color.borderOrange()?.cgColor
         $0.layer.borderWidth = 2
-        $0.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(enterLoginButtonTapped), for: .touchUpInside)
+    }
+
+    private lazy var registrationButton = UIButton(type: .system).then {
+        $0.setTitle("Зарегистрироваться", for: .normal)
+        $0.titleLabel?.font = R.font.nunitoBold(size: 18)
+        $0.setTitleColor(.black, for: .normal)
+        $0.backgroundColor = .white
+        $0.layer.cornerRadius = 12
+        $0.layer.borderColor = R.color.borderOrange()?.cgColor
+        $0.layer.borderWidth = 2
+        $0.addTarget(self, action: #selector(registrationButtonTapped), for: .touchUpInside)
     }
 
     // MARK: - Setup Layout
@@ -89,10 +76,8 @@ class LoginViewController: UIViewController {
     private func addSubviews() {
         view.addSubview(contentView)
         view.addSubview(logoImageView)
-        view.addSubview(loginTextField)
-        view.addSubview(passwordTextField)
-        view.addSubview(resetPassword)
-        view.addSubview(loginButton)
+        view.addSubview(enterLoginButton)
+        view.addSubview(registrationButton)
     }
 
     private func setupLayout() {
@@ -106,40 +91,30 @@ class LoginViewController: UIViewController {
             $0.centerY.equalTo(UIScreen.main.bounds.height / 3)
         }
 
-        loginTextField.snp.makeConstraints {
+        enterLoginButton.snp.makeConstraints {
             $0.centerY.equalTo(logoImageView.snp.bottom).offset(50)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(40)
         }
 
-        passwordTextField.snp.makeConstraints {
-            $0.top.equalTo(loginTextField.snp.bottom).offset(20)
+        registrationButton.snp.makeConstraints {
+            $0.centerY.equalTo(enterLoginButton.snp.bottom).offset(50)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(40)
         }
-
-        resetPassword.snp.makeConstraints {
-            $0.top.equalTo(passwordTextField.snp.bottom).offset(20)
-            $0.leading.equalTo(20)
-            $0.trailing.equalTo(-20)
-            $0.height.equalTo(20)
-        }
-        
-        loginButton.snp.makeConstraints {
-            $0.top.equalTo(resetPassword.snp.bottom).offset(20)
-            $0.width.equalTo(view.frame.width * 0.5)
-            $0.height.equalTo(view.frame.height * 0.06)
-            $0.centerX.equalTo(view.snp.centerX)
-        }
     }
 
-    @objc private func openModuleResetPassword() {
-        print("Open reset password")
-    }
-    
-    @objc private func loginButtonTapped() {
+    @objc private func registrationButtonTapped() {
         print(#function)
+        let viewController = RegistrationViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    @objc private func enterLoginButtonTapped() {
+        print(#function)
+        let viewController = LoginViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

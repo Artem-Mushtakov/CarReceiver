@@ -17,6 +17,8 @@
 		AC9FBBDF285BAE79006AF720 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC9FBBDD285BAE0A006AF720 /* Nunito-Bold.ttf */; };
 		AC9FBBE0285BAE7B006AF720 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC9FBBDC285BAE0A006AF720 /* Nunito-Regular.ttf */; };
 		AC9FBBE1285BAE7E006AF720 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC9FBBDE285BAE0A006AF720 /* Nunito-SemiBold.ttf */; };
+		ACCD760E285F9BC400376095 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD760D285F9BC400376095 /* RegistrationViewController.swift */; };
+		ACCD7611285F9E4800376095 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7610285F9E4800376095 /* StartViewController.swift */; };
 		ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532C28591C210069C031 /* AppDelegate.swift */; };
 		ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532E28591C210069C031 /* SceneDelegate.swift */; };
 		ACE9533128591C210069C031 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9533028591C210069C031 /* LoginViewController.swift */; };
@@ -42,6 +44,8 @@
 		AC9FBBDC285BAE0A006AF720 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		AC9FBBDD285BAE0A006AF720 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		AC9FBBDE285BAE0A006AF720 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		ACCD760D285F9BC400376095 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		ACCD7610285F9E4800376095 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		ACE9532928591C210069C031 /* CarReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE9532C28591C210069C031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE9532E28591C210069C031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,22 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		ACCD760C285F9BA600376095 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD760D285F9BC400376095 /* RegistrationViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		ACCD760F285F9E3700376095 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD7610285F9E4800376095 /* StartViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
 		ACE9532028591C210069C031 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +205,8 @@
 		ACE9534328591EE80069C031 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				ACCD760F285F9E3700376095 /* Start */,
+				ACCD760C285F9BA600376095 /* Registration */,
 				AC9FBBCD285A7330006AF720 /* Login */,
 			);
 			path = Scenes;
@@ -360,6 +382,8 @@
 				ACE9533128591C210069C031 /* LoginViewController.swift in Sources */,
 				ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */,
 				5C54E6A7285F5B44003FFCEF /* FirebaseManager.swift in Sources */,
+				ACCD760E285F9BC400376095 /* RegistrationViewController.swift in Sources */,
+				ACCD7611285F9E4800376095 /* StartViewController.swift in Sources */,
 				AC9FBBDA285BA58C006AF720 /* CustomTextField.swift in Sources */,
 				ACE953602859333A0069C031 /* R.generated.swift in Sources */,
 				AC9FBBCC285A7326006AF720 /* LoginViewModel.swift in Sources */,
