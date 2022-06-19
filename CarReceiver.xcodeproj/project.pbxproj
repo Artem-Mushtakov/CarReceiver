@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5AC9EF35DE83FCB256C0FF8A /* Pods_CarReceiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2208AAF5ECA7E201C4532880 /* Pods_CarReceiver.framework */; };
+		5C54E6A7285F5B44003FFCEF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54E6A6285F5B44003FFCEF /* FirebaseManager.swift */; };
+		5C54E6AA285F5C4D003FFCEF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54E6A9285F5C4D003FFCEF /* Validator.swift */; };
+		5C54E6AD285F5DC9003FFCEF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54E6AC285F5DC9003FFCEF /* Errors.swift */; };
+		5CC59646285F547D0033CAE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC59645285F547D0033CAE5 /* GoogleService-Info.plist */; };
 		AC9FBBCC285A7326006AF720 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */; };
 		AC9FBBDA285BA58C006AF720 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FBBD9285BA58C006AF720 /* CustomTextField.swift */; };
 		AC9FBBDF285BAE79006AF720 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC9FBBDD285BAE0A006AF720 /* Nunito-Bold.ttf */; };
@@ -28,6 +32,10 @@
 /* Begin PBXFileReference section */
 		2208AAF5ECA7E201C4532880 /* Pods_CarReceiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarReceiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E758E1AFD4F7F8A164197B /* Pods-CarReceiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarReceiver.release.xcconfig"; path = "Target Support Files/Pods-CarReceiver/Pods-CarReceiver.release.xcconfig"; sourceTree = "<group>"; };
+		5C54E6A6285F5B44003FFCEF /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		5C54E6A9285F5C4D003FFCEF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		5C54E6AC285F5DC9003FFCEF /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		5CC59645285F547D0033CAE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F9FB5ECD1D8248C5D1A2A55 /* Pods-CarReceiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarReceiver.debug.xcconfig"; path = "Target Support Files/Pods-CarReceiver/Pods-CarReceiver.debug.xcconfig"; sourceTree = "<group>"; };
 		AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AC9FBBD9285BA58C006AF720 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -67,6 +75,23 @@
 				37E758E1AFD4F7F8A164197B /* Pods-CarReceiver.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5C54E6A8285F5C3C003FFCEF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5C54E6A6285F5B44003FFCEF /* FirebaseManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5C54E6AB285F5C50003FFCEF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5C54E6A9285F5C4D003FFCEF /* Validator.swift */,
+				5C54E6AC285F5DC9003FFCEF /* Errors.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		773A39BD963F2847599A144C /* Frameworks */ = {
@@ -125,10 +150,13 @@
 		ACE9532B28591C210069C031 /* CarReceiver */ = {
 			isa = PBXGroup;
 			children = (
+				5CC59645285F547D0033CAE5 /* GoogleService-Info.plist */,
 				ACE9534228591EE20069C031 /* App */,
 				ACE953612859A08D0069C031 /* Base+Extensions */,
 				ACE9534328591EE80069C031 /* Scenes */,
 				ACE9534128591EC90069C031 /* Resources */,
+				5C54E6A8285F5C3C003FFCEF /* Services */,
+				5C54E6AB285F5C50003FFCEF /* Helpers */,
 			);
 			path = CarReceiver;
 			sourceTree = "<group>";
@@ -255,6 +283,7 @@
 				AC9FBBE0285BAE7B006AF720 /* Nunito-Regular.ttf in Resources */,
 				ACE9533628591C230069C031 /* Assets.xcassets in Resources */,
 				AC9FBBE1285BAE7E006AF720 /* Nunito-SemiBold.ttf in Resources */,
+				5CC59646285F547D0033CAE5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,11 +356,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C54E6AA285F5C4D003FFCEF /* Validator.swift in Sources */,
 				ACE9533128591C210069C031 /* LoginViewController.swift in Sources */,
 				ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */,
+				5C54E6A7285F5B44003FFCEF /* FirebaseManager.swift in Sources */,
 				AC9FBBDA285BA58C006AF720 /* CustomTextField.swift in Sources */,
 				ACE953602859333A0069C031 /* R.generated.swift in Sources */,
 				AC9FBBCC285A7326006AF720 /* LoginViewModel.swift in Sources */,
+				5C54E6AD285F5DC9003FFCEF /* Errors.swift in Sources */,
 				ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,7 +504,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8F65V3YM64;
+				DEVELOPMENT_TEAM = JC5G892K3F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarReceiver/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CarReceiver;
@@ -486,7 +518,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.myCarReceiver.CarReceiver.my;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCarReceiver1Build;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -502,7 +534,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8F65V3YM64;
+				DEVELOPMENT_TEAM = JC5G892K3F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarReceiver/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CarReceiver;
@@ -516,7 +548,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.myCarReceiver.CarReceiver.my;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myCarReceiver1Build;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

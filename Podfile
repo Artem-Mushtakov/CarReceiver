@@ -7,6 +7,9 @@ target 'CarReceiver' do
 
   # Pods for CarReceiver
 
-	pod 'R.swift'
+   pod 'R.swift'
+   pod 'Firebase/Analytics'
+   pod 'Firebase/Auth'
+   pod 'Firebase/Firestore'
 
 end

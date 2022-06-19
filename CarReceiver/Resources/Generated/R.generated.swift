@@ -85,6 +85,7 @@ struct R: Rswift.Validatable {
   }
 
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
 
@@ -105,10 +106,14 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  /// This `R.color` struct is generated, and contains static references to 3 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `borderOrange`.
+    static let borderOrange = Rswift.ColorResource(bundle: R.hostingBundle, name: "borderOrange")
+    /// Color `orangeColor`.
+    static let orangeColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "orangeColor")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -116,6 +121,24 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func accentColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.accentColor, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "borderOrange", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func borderOrange(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.borderOrange, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "orangeColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func orangeColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.orangeColor, compatibleWith: traitCollection)
     }
     #endif
 
@@ -127,18 +150,105 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(watchOS)
+    /// `UIColor(named: "borderOrange", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func borderOrange(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.borderOrange.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "orangeColor", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func orangeColor(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.orangeColor.name)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
+  /// This `R.file` struct is generated, and contains static references to 4 files.
+  struct file {
+    /// Resource file `GoogleService-Info.plist`.
+    static let googleServiceInfoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
+    /// Resource file `Nunito-Bold.ttf`.
+    static let nunitoBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Nunito-Bold", pathExtension: "ttf")
+    /// Resource file `Nunito-Regular.ttf`.
+    static let nunitoRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Nunito-Regular", pathExtension: "ttf")
+    /// Resource file `Nunito-SemiBold.ttf`.
+    static let nunitoSemiBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Nunito-SemiBold", pathExtension: "ttf")
+
+    /// `bundle.url(forResource: "GoogleService-Info", withExtension: "plist")`
+    static func googleServiceInfoPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.googleServiceInfoPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Nunito-Bold", withExtension: "ttf")`
+    static func nunitoBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.nunitoBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Nunito-Regular", withExtension: "ttf")`
+    static func nunitoRegularTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.nunitoRegularTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Nunito-SemiBold", withExtension: "ttf")`
+    static func nunitoSemiBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.nunitoSemiBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.font` struct is generated, and contains static references to 3 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `Nunito-Bold`.
+    static let nunitoBold = Rswift.FontResource(fontName: "Nunito-Bold")
+    /// Font `Nunito-Regular`.
+    static let nunitoRegular = Rswift.FontResource(fontName: "Nunito-Regular")
+    /// Font `Nunito-SemiBold`.
+    static let nunitoSemiBold = Rswift.FontResource(fontName: "Nunito-SemiBold")
+
+    /// `UIFont(name: "Nunito-Bold", size: ...)`
+    static func nunitoBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: nunitoBold, size: size)
+    }
+
+    /// `UIFont(name: "Nunito-Regular", size: ...)`
+    static func nunitoRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: nunitoRegular, size: size)
+    }
+
+    /// `UIFont(name: "Nunito-SemiBold", size: ...)`
+    static func nunitoSemiBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: nunitoSemiBold, size: size)
+    }
+
+    static func validate() throws {
+      if R.font.nunitoBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Nunito-Bold' could not be loaded, is 'Nunito-Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.nunitoRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Nunito-Regular' could not be loaded, is 'Nunito-Regular.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.nunitoSemiBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Nunito-SemiBold' could not be loaded, is 'Nunito-SemiBold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+
     fileprivate init() {}
   }
 
   /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
-    /// Image `Image8`.
-    static let image8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "Image8")
+    /// Image `backgroundImage`.
+    static let backgroundImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "backgroundImage")
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "Image8", bundle: ..., traitCollection: ...)`
-    static func image8(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.image8, compatibleWith: traitCollection)
+    /// `UIImage(named: "backgroundImage", bundle: ..., traitCollection: ...)`
+    static func backgroundImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.backgroundImage, compatibleWith: traitCollection)
     }
     #endif
 

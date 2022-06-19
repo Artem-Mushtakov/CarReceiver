@@ -10,21 +10,30 @@ import UIKit
 class CustomTextField: UITextField {
 
     // MARK: - Initial
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        setup()
+//    }
+    private var isNeedSecure: Bool
+    
+    init(_ isNeedSecure: Bool) {
+        self.isNeedSecure = isNeedSecure
+        super.init(frame: .zero)
         setup()
     }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        setup()
+//    }
 
     // MARK: - Setup
 
     private func setup() {
-        self.isSecureTextEntry = true
+        self.isSecureTextEntry = isNeedSecure
         setupTextFieldView()
     }
 
@@ -35,9 +44,10 @@ class CustomTextField: UITextField {
         self.leftViewMode = .always
 
         /// right view
-        self.rightView = isSecureButton
-        self.rightViewMode = .always
-
+        if isNeedSecure {
+            self.rightView = isSecureButton
+            self.rightViewMode = .always
+        }
         /// setup layer
         self.layer.backgroundColor = UIColor.white.cgColor
         self.layer.cornerRadius = 10
@@ -64,3 +74,5 @@ class CustomTextField: UITextField {
         self.isSecureTextEntry = !sender.isSelected
     }
 }
+
+

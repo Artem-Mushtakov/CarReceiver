@@ -54,13 +54,13 @@ class LoginViewController: UIViewController {
         $0.tintColor = R.color.orangeColor()?.withAlphaComponent(0.6)
     }
 
-    private lazy var loginTextField = CustomTextField().then {
+    private lazy var loginTextField = CustomTextField(false).then {
         $0.placeholder = "Введите логин"
         $0.font = R.font.nunitoRegular(size: 14)
         $0.tintColor = .lightGray
     }
 
-    private lazy var passwordTextField = CustomTextField().then {
+    private lazy var passwordTextField = CustomTextField(true).then {
         $0.placeholder = "Введите пароль"
         $0.font = R.font.nunitoRegular(size: 14)
         $0.tintColor = .gray
@@ -72,6 +72,17 @@ class LoginViewController: UIViewController {
         $0.setTitleColor(.black, for: .normal)
         $0.addTarget(self, action: #selector(openModuleResetPassword), for: .touchUpInside)
     }
+    
+    private lazy var loginButton = UIButton(type: .system).then {
+        $0.setTitle("Войти", for: .normal)
+        $0.titleLabel?.font = R.font.nunitoBold(size: 18)
+        $0.setTitleColor(.black, for: .normal)
+        $0.backgroundColor = .white
+        $0.layer.cornerRadius = 12
+        $0.layer.borderColor = UIColor(displayP3Red: 255/255, green: 183/255, blue:  86/255, alpha:1).cgColor
+        $0.layer.borderWidth = 2
+        $0.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+    }
 
     // MARK: - Setup Layout
 
@@ -81,6 +92,7 @@ class LoginViewController: UIViewController {
         view.addSubview(loginTextField)
         view.addSubview(passwordTextField)
         view.addSubview(resetPassword)
+        view.addSubview(loginButton)
     }
 
     private func setupLayout() {
@@ -114,9 +126,20 @@ class LoginViewController: UIViewController {
             $0.trailing.equalTo(-20)
             $0.height.equalTo(20)
         }
+        
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(resetPassword.snp.bottom).offset(20)
+            $0.width.equalTo(view.frame.width * 0.5)
+            $0.height.equalTo(view.frame.height * 0.06)
+            $0.centerX.equalTo(view.snp.centerX)
+        }
     }
 
     @objc private func openModuleResetPassword() {
         print("Open reset password")
+    }
+    
+    @objc private func loginButtonTapped() {
+        print(#function)
     }
 }
