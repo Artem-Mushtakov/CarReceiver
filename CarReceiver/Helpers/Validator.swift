@@ -27,9 +27,9 @@ class Validator: ValidatorProtocol {
               confirmPassword.count >= 6 else { return false }
         return true
     }
+    
     func checkPasswordForMatch(_ password: String, _ confirmPassword: String) -> Bool {
         guard password == confirmPassword else { return false }
         return true
     }
-    
 }

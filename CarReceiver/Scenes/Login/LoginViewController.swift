@@ -79,7 +79,7 @@ class LoginViewController: UIViewController {
         $0.setTitleColor(.black, for: .normal)
         $0.backgroundColor = .white
         $0.layer.cornerRadius = 12
-        $0.layer.borderColor = UIColor(displayP3Red: 255/255, green: 183/255, blue:  86/255, alpha:1).cgColor
+        $0.layer.borderColor = R.color.borderOrange()?.cgColor
         $0.layer.borderWidth = 2
         $0.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }

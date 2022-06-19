@@ -10,10 +10,7 @@ import UIKit
 class CustomTextField: UITextField {
 
     // MARK: - Initial
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        setup()
-//    }
+
     private var isNeedSecure: Bool
     
     init(_ isNeedSecure: Bool) {
@@ -25,10 +22,6 @@ class CustomTextField: UITextField {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        setup()
-//    }
 
     // MARK: - Setup
 
@@ -74,5 +67,3 @@ class CustomTextField: UITextField {
         self.isSecureTextEntry = !sender.isSelected
     }
 }
-
-
