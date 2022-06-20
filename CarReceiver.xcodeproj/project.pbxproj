@@ -19,6 +19,11 @@
 		AC9FBBE1285BAE7E006AF720 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC9FBBDE285BAE0A006AF720 /* Nunito-SemiBold.ttf */; };
 		ACCD760E285F9BC400376095 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD760D285F9BC400376095 /* RegistrationViewController.swift */; };
 		ACCD7611285F9E4800376095 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7610285F9E4800376095 /* StartViewController.swift */; };
+		ACCD76152860E3D400376095 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76142860E3D400376095 /* BaseViewController.swift */; };
+		ACCD76172860EBB900376095 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76162860EBB900376095 /* StartView.swift */; };
+		ACCD76192860EBC300376095 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76182860EBC300376095 /* BaseView.swift */; };
+		ACCD761B2860F05700376095 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD761A2860F05600376095 /* RegistrationView.swift */; };
+		ACCD761E2860F76F00376095 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD761D2860F76F00376095 /* LoginView.swift */; };
 		ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532C28591C210069C031 /* AppDelegate.swift */; };
 		ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532E28591C210069C031 /* SceneDelegate.swift */; };
 		ACE9533128591C210069C031 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9533028591C210069C031 /* LoginViewController.swift */; };
@@ -46,6 +51,11 @@
 		AC9FBBDE285BAE0A006AF720 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		ACCD760D285F9BC400376095 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		ACCD7610285F9E4800376095 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		ACCD76142860E3D400376095 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		ACCD76162860EBB900376095 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		ACCD76182860EBC300376095 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		ACCD761A2860F05600376095 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		ACCD761D2860F76F00376095 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ACE9532928591C210069C031 /* CarReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE9532C28591C210069C031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE9532E28591C210069C031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE9533028591C210069C031 /* LoginViewController.swift */,
+				ACCD761D2860F76F00376095 /* LoginView.swift */,
 				AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */,
 			);
 			path = Login;
@@ -137,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				ACCD760D285F9BC400376095 /* RegistrationViewController.swift */,
+				ACCD761A2860F05600376095 /* RegistrationView.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -145,8 +157,18 @@
 			isa = PBXGroup;
 			children = (
 				ACCD7610285F9E4800376095 /* StartViewController.swift */,
+				ACCD76162860EBB900376095 /* StartView.swift */,
 			);
 			path = Start;
+			sourceTree = "<group>";
+		};
+		ACCD76132860E3C400376095 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD76142860E3D400376095 /* BaseViewController.swift */,
+				ACCD76182860EBC300376095 /* BaseView.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		ACE9532028591C210069C031 = {
@@ -223,6 +245,7 @@
 		ACE953612859A08D0069C031 /* Base+Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ACCD76132860E3C400376095 /* Base */,
 				AC9FBBD8285BA579006AF720 /* UIElements */,
 			);
 			path = "Base+Extensions";
@@ -383,11 +406,16 @@
 				ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */,
 				5C54E6A7285F5B44003FFCEF /* FirebaseManager.swift in Sources */,
 				ACCD760E285F9BC400376095 /* RegistrationViewController.swift in Sources */,
+				ACCD76172860EBB900376095 /* StartView.swift in Sources */,
+				ACCD76152860E3D400376095 /* BaseViewController.swift in Sources */,
 				ACCD7611285F9E4800376095 /* StartViewController.swift in Sources */,
 				AC9FBBDA285BA58C006AF720 /* CustomTextField.swift in Sources */,
+				ACCD761B2860F05700376095 /* RegistrationView.swift in Sources */,
 				ACE953602859333A0069C031 /* R.generated.swift in Sources */,
 				AC9FBBCC285A7326006AF720 /* LoginViewModel.swift in Sources */,
+				ACCD76192860EBC300376095 /* BaseView.swift in Sources */,
 				5C54E6AD285F5DC9003FFCEF /* Errors.swift in Sources */,
+				ACCD761E2860F76F00376095 /* LoginView.swift in Sources */,
 				ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
