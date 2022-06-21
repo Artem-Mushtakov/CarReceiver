@@ -14,6 +14,10 @@ import SnapKit
 
 class LoginViewController: BaseViewController<LoginView> {
 
+    // MARK: - Properties
+
+    var coordinator: LoginCoordinatorFlow?
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -41,14 +45,6 @@ class LoginViewController: BaseViewController<LoginView> {
             .bind(to: rx.loginButtonTappedBinding)
             .disposed(by: disposeBag)
     }
-
-    @objc private func openModuleResetPassword() {
-        print("Open reset password")
-    }
-    
-    @objc private func loginButtonTapped() {
-        print(#function)
-    }
 }
 
 // MARK: - Extension Reactive
@@ -57,13 +53,13 @@ extension Reactive where Base: LoginViewController {
 
     var loginButtonTappedBinding: Binder<Void> {
         return Binder(base) { viewController, _ in
-            print("Open module next.")
+            viewController.coordinator?.openMainTabBarCoordinator()
         }
     }
 
     var resetPasswordButtonTappedBinding: Binder<Void> {
         return Binder(base) { viewController, _ in
-            print("Open module reset password.")
+            viewController.coordinator?.openResetPasswordCoordinator()
         }
     }
 }

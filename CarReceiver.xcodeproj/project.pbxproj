@@ -24,6 +24,31 @@
 		ACCD76192860EBC300376095 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76182860EBC300376095 /* BaseView.swift */; };
 		ACCD761B2860F05700376095 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD761A2860F05600376095 /* RegistrationView.swift */; };
 		ACCD761E2860F76F00376095 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD761D2860F76F00376095 /* LoginView.swift */; };
+		ACCD76292862515E00376095 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76282862515E00376095 /* AppCoordinator.swift */; };
+		ACCD762B286251D200376095 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD762A286251D200376095 /* BaseCoordinator.swift */; };
+		ACCD762D286251F300376095 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD762C286251F300376095 /* StartCoordinator.swift */; };
+		ACCD762F286253DE00376095 /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD762E286253DE00376095 /* RegistrationCoordinator.swift */; };
+		ACCD76312862549200376095 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76302862549200376095 /* LoginCoordinator.swift */; };
+		ACCD76342862560E00376095 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76332862560E00376095 /* MainTabBarController.swift */; };
+		ACCD76362862562C00376095 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76352862562C00376095 /* MainTabBarCoordinator.swift */; };
+		ACCD763D2862579400376095 /* AllActsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD763C2862579400376095 /* AllActsViewController.swift */; };
+		ACCD763F286257A000376095 /* AllActsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD763E286257A000376095 /* AllActsView.swift */; };
+		ACCD7641286257AB00376095 /* AllActsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7640286257AB00376095 /* AllActsCoordinator.swift */; };
+		ACCD7643286257BA00376095 /* FavoriteActsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7642286257BA00376095 /* FavoriteActsViewController.swift */; };
+		ACCD7645286257C100376095 /* FavoriteActsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7644286257C100376095 /* FavoriteActsView.swift */; };
+		ACCD7647286257C900376095 /* FavoriteActsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7646286257C900376095 /* FavoriteActsCoordinator.swift */; };
+		ACCD7649286257D500376095 /* CreateNewActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7648286257D500376095 /* CreateNewActViewController.swift */; };
+		ACCD764B286257DE00376095 /* CreateNewActView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD764A286257DE00376095 /* CreateNewActView.swift */; };
+		ACCD764D286257E600376095 /* CreateNewActCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD764C286257E600376095 /* CreateNewActCoordinator.swift */; };
+		ACCD764F286257F100376095 /* DetailActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD764E286257F100376095 /* DetailActViewController.swift */; };
+		ACCD7651286257F600376095 /* DetailActView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7650286257F600376095 /* DetailActView.swift */; };
+		ACCD7653286257FE00376095 /* DetailActCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7652286257FE00376095 /* DetailActCoordinator.swift */; };
+		ACCD76552862580D00376095 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76542862580D00376095 /* SettingsViewController.swift */; };
+		ACCD76572862581300376095 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76562862581300376095 /* SettingsView.swift */; };
+		ACCD76592862581B00376095 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76582862581B00376095 /* SettingsCoordinator.swift */; };
+		ACCD765C28625F5700376095 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD765B28625F5700376095 /* ResetPasswordViewController.swift */; };
+		ACCD765E28625F5D00376095 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD765D28625F5D00376095 /* ResetPasswordView.swift */; };
+		ACCD766028625F6900376095 /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD765F28625F6900376095 /* ResetPasswordCoordinator.swift */; };
 		ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532C28591C210069C031 /* AppDelegate.swift */; };
 		ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532E28591C210069C031 /* SceneDelegate.swift */; };
 		ACE9533128591C210069C031 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9533028591C210069C031 /* LoginViewController.swift */; };
@@ -56,6 +81,31 @@
 		ACCD76182860EBC300376095 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		ACCD761A2860F05600376095 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		ACCD761D2860F76F00376095 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ACCD76282862515E00376095 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		ACCD762A286251D200376095 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		ACCD762C286251F300376095 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		ACCD762E286253DE00376095 /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		ACCD76302862549200376095 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		ACCD76332862560E00376095 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		ACCD76352862562C00376095 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		ACCD763C2862579400376095 /* AllActsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActsViewController.swift; sourceTree = "<group>"; };
+		ACCD763E286257A000376095 /* AllActsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActsView.swift; sourceTree = "<group>"; };
+		ACCD7640286257AB00376095 /* AllActsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActsCoordinator.swift; sourceTree = "<group>"; };
+		ACCD7642286257BA00376095 /* FavoriteActsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteActsViewController.swift; sourceTree = "<group>"; };
+		ACCD7644286257C100376095 /* FavoriteActsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteActsView.swift; sourceTree = "<group>"; };
+		ACCD7646286257C900376095 /* FavoriteActsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteActsCoordinator.swift; sourceTree = "<group>"; };
+		ACCD7648286257D500376095 /* CreateNewActViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewActViewController.swift; sourceTree = "<group>"; };
+		ACCD764A286257DE00376095 /* CreateNewActView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewActView.swift; sourceTree = "<group>"; };
+		ACCD764C286257E600376095 /* CreateNewActCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewActCoordinator.swift; sourceTree = "<group>"; };
+		ACCD764E286257F100376095 /* DetailActViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActViewController.swift; sourceTree = "<group>"; };
+		ACCD7650286257F600376095 /* DetailActView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActView.swift; sourceTree = "<group>"; };
+		ACCD7652286257FE00376095 /* DetailActCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActCoordinator.swift; sourceTree = "<group>"; };
+		ACCD76542862580D00376095 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		ACCD76562862581300376095 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		ACCD76582862581B00376095 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		ACCD765B28625F5700376095 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		ACCD765D28625F5D00376095 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		ACCD765F28625F6900376095 /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
 		ACE9532928591C210069C031 /* CarReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE9532C28591C210069C031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE9532E28591C210069C031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +172,7 @@
 				ACE9533028591C210069C031 /* LoginViewController.swift */,
 				ACCD761D2860F76F00376095 /* LoginView.swift */,
 				AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */,
+				ACCD76302862549200376095 /* LoginCoordinator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -149,6 +200,7 @@
 			children = (
 				ACCD760D285F9BC400376095 /* RegistrationViewController.swift */,
 				ACCD761A2860F05600376095 /* RegistrationView.swift */,
+				ACCD762E286253DE00376095 /* RegistrationCoordinator.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -158,6 +210,7 @@
 			children = (
 				ACCD7610285F9E4800376095 /* StartViewController.swift */,
 				ACCD76162860EBB900376095 /* StartView.swift */,
+				ACCD762C286251F300376095 /* StartCoordinator.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -167,8 +220,78 @@
 			children = (
 				ACCD76142860E3D400376095 /* BaseViewController.swift */,
 				ACCD76182860EBC300376095 /* BaseView.swift */,
+				ACCD762A286251D200376095 /* BaseCoordinator.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		ACCD7632286255D400376095 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD76332862560E00376095 /* MainTabBarController.swift */,
+				ACCD76352862562C00376095 /* MainTabBarCoordinator.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		ACCD7637286256FF00376095 /* AllActs */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD763C2862579400376095 /* AllActsViewController.swift */,
+				ACCD763E286257A000376095 /* AllActsView.swift */,
+				ACCD7640286257AB00376095 /* AllActsCoordinator.swift */,
+			);
+			path = AllActs;
+			sourceTree = "<group>";
+		};
+		ACCD76382862570D00376095 /* FavoriteActs */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD7642286257BA00376095 /* FavoriteActsViewController.swift */,
+				ACCD7644286257C100376095 /* FavoriteActsView.swift */,
+				ACCD7646286257C900376095 /* FavoriteActsCoordinator.swift */,
+			);
+			path = FavoriteActs;
+			sourceTree = "<group>";
+		};
+		ACCD76392862573800376095 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD76542862580D00376095 /* SettingsViewController.swift */,
+				ACCD76562862581300376095 /* SettingsView.swift */,
+				ACCD76582862581B00376095 /* SettingsCoordinator.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		ACCD763A2862574800376095 /* DetailAct */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD764E286257F100376095 /* DetailActViewController.swift */,
+				ACCD7650286257F600376095 /* DetailActView.swift */,
+				ACCD7652286257FE00376095 /* DetailActCoordinator.swift */,
+			);
+			path = DetailAct;
+			sourceTree = "<group>";
+		};
+		ACCD763B2862577500376095 /* CreateNewAct */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD7648286257D500376095 /* CreateNewActViewController.swift */,
+				ACCD764A286257DE00376095 /* CreateNewActView.swift */,
+				ACCD764C286257E600376095 /* CreateNewActCoordinator.swift */,
+			);
+			path = CreateNewAct;
+			sourceTree = "<group>";
+		};
+		ACCD765A28625F4200376095 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD765B28625F5700376095 /* ResetPasswordViewController.swift */,
+				ACCD765D28625F5D00376095 /* ResetPasswordView.swift */,
+				ACCD765F28625F6900376095 /* ResetPasswordCoordinator.swift */,
+			);
+			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 		ACE9532028591C210069C031 = {
@@ -216,6 +339,7 @@
 		ACE9534228591EE20069C031 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				ACCD76282862515E00376095 /* AppCoordinator.swift */,
 				ACE9532C28591C210069C031 /* AppDelegate.swift */,
 				ACE9532E28591C210069C031 /* SceneDelegate.swift */,
 				ACE9533728591C230069C031 /* LaunchScreen.storyboard */,
@@ -229,7 +353,14 @@
 			children = (
 				ACCD760F285F9E3700376095 /* Start */,
 				ACCD760C285F9BA600376095 /* Registration */,
+				ACCD765A28625F4200376095 /* ResetPassword */,
 				AC9FBBCD285A7330006AF720 /* Login */,
+				ACCD7632286255D400376095 /* MainTabBar */,
+				ACCD7637286256FF00376095 /* AllActs */,
+				ACCD76382862570D00376095 /* FavoriteActs */,
+				ACCD763B2862577500376095 /* CreateNewAct */,
+				ACCD763A2862574800376095 /* DetailAct */,
+				ACCD76392862573800376095 /* Settings */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -401,22 +532,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCD764F286257F100376095 /* DetailActViewController.swift in Sources */,
 				5C54E6AA285F5C4D003FFCEF /* Validator.swift in Sources */,
+				ACCD7641286257AB00376095 /* AllActsCoordinator.swift in Sources */,
+				ACCD76362862562C00376095 /* MainTabBarCoordinator.swift in Sources */,
+				ACCD762B286251D200376095 /* BaseCoordinator.swift in Sources */,
+				ACCD76342862560E00376095 /* MainTabBarController.swift in Sources */,
+				ACCD76572862581300376095 /* SettingsView.swift in Sources */,
+				ACCD763F286257A000376095 /* AllActsView.swift in Sources */,
 				ACE9533128591C210069C031 /* LoginViewController.swift in Sources */,
+				ACCD765C28625F5700376095 /* ResetPasswordViewController.swift in Sources */,
+				ACCD7653286257FE00376095 /* DetailActCoordinator.swift in Sources */,
+				ACCD762F286253DE00376095 /* RegistrationCoordinator.swift in Sources */,
+				ACCD76292862515E00376095 /* AppCoordinator.swift in Sources */,
 				ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */,
 				5C54E6A7285F5B44003FFCEF /* FirebaseManager.swift in Sources */,
+				ACCD763D2862579400376095 /* AllActsViewController.swift in Sources */,
 				ACCD760E285F9BC400376095 /* RegistrationViewController.swift in Sources */,
 				ACCD76172860EBB900376095 /* StartView.swift in Sources */,
+				ACCD7649286257D500376095 /* CreateNewActViewController.swift in Sources */,
+				ACCD76312862549200376095 /* LoginCoordinator.swift in Sources */,
 				ACCD76152860E3D400376095 /* BaseViewController.swift in Sources */,
 				ACCD7611285F9E4800376095 /* StartViewController.swift in Sources */,
+				ACCD764D286257E600376095 /* CreateNewActCoordinator.swift in Sources */,
+				ACCD764B286257DE00376095 /* CreateNewActView.swift in Sources */,
+				ACCD766028625F6900376095 /* ResetPasswordCoordinator.swift in Sources */,
+				ACCD762D286251F300376095 /* StartCoordinator.swift in Sources */,
 				AC9FBBDA285BA58C006AF720 /* CustomTextField.swift in Sources */,
+				ACCD7645286257C100376095 /* FavoriteActsView.swift in Sources */,
+				ACCD765E28625F5D00376095 /* ResetPasswordView.swift in Sources */,
 				ACCD761B2860F05700376095 /* RegistrationView.swift in Sources */,
 				ACE953602859333A0069C031 /* R.generated.swift in Sources */,
 				AC9FBBCC285A7326006AF720 /* LoginViewModel.swift in Sources */,
+				ACCD7643286257BA00376095 /* FavoriteActsViewController.swift in Sources */,
 				ACCD76192860EBC300376095 /* BaseView.swift in Sources */,
+				ACCD76592862581B00376095 /* SettingsCoordinator.swift in Sources */,
 				5C54E6AD285F5DC9003FFCEF /* Errors.swift in Sources */,
+				ACCD7651286257F600376095 /* DetailActView.swift in Sources */,
+				ACCD7647286257C900376095 /* FavoriteActsCoordinator.swift in Sources */,
 				ACCD761E2860F76F00376095 /* LoginView.swift in Sources */,
 				ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */,
+				ACCD76552862580D00376095 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

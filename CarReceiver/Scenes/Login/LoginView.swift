@@ -124,4 +124,3 @@ class LoginView: BaseView {
             .disposed(by: disposeBag)
     }
 }
-

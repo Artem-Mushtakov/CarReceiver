@@ -12,6 +12,9 @@ import RxSwift
 
 class RegistrationViewController: BaseViewController<RegistrationView> {
 
+    // MARK: - Properties
+
+    var coordinator: RegistrationCoordinatorFlow?
     // MARK: - Lifecycle
 
     override func viewDidLoad() {

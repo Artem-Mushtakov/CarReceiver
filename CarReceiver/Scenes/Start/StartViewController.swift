@@ -10,6 +10,10 @@ import RxSwift
 
 class StartViewController: BaseViewController<StartView> {
 
+    // MARK: - Properties
+
+    var coordinator: StartCoordinatorFlow?
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -37,15 +41,13 @@ extension Reactive where Base: StartViewController {
 
     var openRegistrationViewController: Binder<Void> {
         return Binder(base) { viewController, _ in
-            let registrationViewController = RegistrationViewController()
-            viewController.navigationController?.pushViewController(registrationViewController, animated: true)
+            viewController.coordinator?.openRegistrationCoordinator()
         }
     }
 
     var openLoginViewController: Binder<Void> {
         return Binder(base) { viewController, _ in
-            let loginViewController = LoginViewController()
-            viewController.navigationController?.pushViewController(loginViewController, animated: true)
+            viewController.coordinator?.openLoginCoordinator()
         }
     }
 }
