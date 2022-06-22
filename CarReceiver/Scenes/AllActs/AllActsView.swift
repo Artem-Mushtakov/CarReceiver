@@ -16,7 +16,7 @@ class AllActsView: BaseView {
     // MARK: - Ui elements
 
     private lazy var testLabel = UILabel().then {
-        $0.text = "AllActsView"
+        $0.text = "Все акты"
         $0.font = .boldSystemFont(ofSize: 17)
     }
 

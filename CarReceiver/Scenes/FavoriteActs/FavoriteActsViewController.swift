@@ -19,7 +19,7 @@ class FavoriteActsViewController: BaseViewController<FavoriteActsView> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "FavoriteActsViewController"
+        title = "Избранные"
     }
 
     // MARK: - Binding

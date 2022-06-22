@@ -21,22 +21,29 @@ class MainTabBarCoordinator: BaseCoordinator {
         mainTabBarController.coordinator = self
 
         let allActsNavigationController = UINavigationController()
-        allActsNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
+        allActsNavigationController.tabBarItem = UITabBarItem(title: "Все",
+                                                              image: UIImage(systemName: "car.2"),
+                                                              tag: 0)
+
         let allActsCoordinator = AllActsCoordinator(navigationController: allActsNavigationController)
 
         let favoriteActsNavigationController = UINavigationController()
-        favoriteActsNavigationController.tabBarItem = UITabBarItem(
-            tabBarSystemItem: .search, tag: 1)
+        favoriteActsNavigationController.tabBarItem = UITabBarItem(title: "Избранные",
+                                                                   image: UIImage(systemName: "car"),
+                                                                   tag: 1)
+
         let favoriteActsCoordinator = FavoriteActsCoordinator(navigationController: favoriteActsNavigationController)
 
-        let detailActNavigationController = UINavigationController()
-        detailActNavigationController.tabBarItem = UITabBarItem(
-            tabBarSystemItem: .history, tag: 2)
-        let detailActCoordinator = DetailActCoordinator(navigationController: detailActNavigationController)
+        let settingsNavigationController = UINavigationController()
+        settingsNavigationController.tabBarItem = UITabBarItem(title: "Настройки",
+                                                               image: UIImage(systemName: "gearshape.fill"),
+                                                               tag: 2)
+
+        let settingsCoordinator = SettingsCoordinator(navigationController: settingsNavigationController)
 
         mainTabBarController.viewControllers = [allActsNavigationController,
                                                 favoriteActsNavigationController,
-                                                detailActNavigationController]
+                                                settingsNavigationController]
         
         mainTabBarController.modalPresentationStyle = .fullScreen
         mainTabBarController.modalTransitionStyle = .flipHorizontal
@@ -44,7 +51,7 @@ class MainTabBarCoordinator: BaseCoordinator {
 
         coordinate(to: allActsCoordinator)
         coordinate(to: favoriteActsCoordinator)
-        coordinate(to: detailActCoordinator)
+        coordinate(to: settingsCoordinator)
     }
 
     // MARK: - Setup function MainTabBarCoordinator

@@ -19,7 +19,7 @@ class DetailActViewController: BaseViewController<DetailActView> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "DetailActViewController"
+        title = "Detail"
     }
 
     // MARK: - Binding

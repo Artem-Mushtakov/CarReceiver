@@ -17,6 +17,7 @@ class LoginView: BaseView {
     var passwordTextFieldPublisher = PublishSubject<String>()
     var tapResetPasswordButtonPublisher = PublishSubject<Void>()
     var tapLoginButtonPublisher = PublishSubject<Void>()
+    var tapRegistrationButtonPublisher = PublishSubject<Void>()
 
     // MARK: - Ui elements
 
@@ -55,6 +56,16 @@ class LoginView: BaseView {
         $0.layer.borderWidth = 2
     }
 
+    private lazy var registerButton = UIButton(type: .system).then {
+        $0.setTitle("Зарегистрироваться", for: .normal)
+        $0.titleLabel?.font = R.font.nunitoBold(size: 18)
+        $0.setTitleColor(.black, for: .normal)
+        $0.backgroundColor = .white
+        $0.layer.cornerRadius = 12
+        $0.layer.borderColor = R.color.borderOrange()?.cgColor
+        $0.layer.borderWidth = 2
+    }
+
     // MARK: - Setup Layout
 
     override func setupHierarchy() {
@@ -63,6 +74,7 @@ class LoginView: BaseView {
         self.addSubview(passwordTextField)
         self.addSubview(resetPassword)
         self.addSubview(loginButton)
+        self.addSubview(registerButton)
     }
 
     override func setupLayout() {
@@ -99,6 +111,13 @@ class LoginView: BaseView {
             $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(40)
         }
+
+        registerButton.snp.makeConstraints {
+            $0.top.equalTo(loginButton.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.height.equalTo(40)
+        }
     }
 
     // MARK: - Binding
@@ -121,6 +140,10 @@ class LoginView: BaseView {
 
         loginButton.rx.tap
             .bind(to: tapLoginButtonPublisher)
+            .disposed(by: disposeBag)
+
+        registerButton.rx.tap
+            .bind(to: tapRegistrationButtonPublisher)
             .disposed(by: disposeBag)
     }
 }

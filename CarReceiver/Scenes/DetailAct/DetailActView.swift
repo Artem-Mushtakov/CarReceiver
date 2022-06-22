@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 class DetailActView: BaseView {
+    
     // MARK: - Properties
 
     // MARK: - Ui elements

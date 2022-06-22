@@ -19,8 +19,8 @@ class AppCoordinator: BaseCoordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
 
-        let startCoordinator = StartCoordinator(navigationController: navigationController)
-        coordinate(to: startCoordinator)
+        let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+        coordinate(to: loginCoordinator)
     }
 }
 

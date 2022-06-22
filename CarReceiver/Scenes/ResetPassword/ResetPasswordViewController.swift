@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import UIKit
 
 class ResetPasswordViewController: BaseViewController<ResetPasswordView> {
 
@@ -19,7 +20,7 @@ class ResetPasswordViewController: BaseViewController<ResetPasswordView> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "ResetPasswordViewController"
+        title = "Забыли пароль"
     }
 
     // MARK: - Binding

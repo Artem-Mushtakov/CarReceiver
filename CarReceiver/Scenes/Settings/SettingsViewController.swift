@@ -19,7 +19,7 @@ class SettingsViewController: BaseViewController<SettingsView> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "SettingsViewController"
+        title = "Настройки"
     }
 
     // MARK: - Binding

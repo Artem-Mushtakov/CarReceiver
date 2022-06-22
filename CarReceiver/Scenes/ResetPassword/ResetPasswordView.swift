@@ -16,7 +16,7 @@ class ResetPasswordView: BaseView {
     // MARK: - Ui elements
 
     private lazy var testLabel = UILabel().then {
-        $0.text = "ResetPasswordView"
+        $0.text = "Восстановление пароля"
         $0.font = .boldSystemFont(ofSize: 17)
     }
 

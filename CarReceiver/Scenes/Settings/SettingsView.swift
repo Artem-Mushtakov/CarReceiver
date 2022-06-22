@@ -10,12 +10,13 @@ import RxSwift
 import RxCocoa
 
 class SettingsView: BaseView {
+    
     // MARK: - Properties
 
     // MARK: - Ui elements
 
     private lazy var testLabel = UILabel().then {
-        $0.text = "SettingsView"
+        $0.text = "Настройки"
         $0.font = .boldSystemFont(ofSize: 17)
     }
 

@@ -25,6 +25,11 @@ class LoginViewController: BaseViewController<LoginView> {
         title = "Вход"
     }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        navigationController?.navigationBar.tintColor = .white
+    }
+
     // MARK: - Binding
 
     override func setupBindingInput() {
@@ -44,6 +49,10 @@ class LoginViewController: BaseViewController<LoginView> {
         contentView.tapLoginButtonPublisher
             .bind(to: rx.loginButtonTappedBinding)
             .disposed(by: disposeBag)
+
+        contentView.tapRegistrationButtonPublisher
+            .bind(to: rx.registrationButtonTappedBinding)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -62,5 +71,10 @@ extension Reactive where Base: LoginViewController {
             viewController.coordinator?.openResetPasswordCoordinator()
         }
     }
-}
 
+    var registrationButtonTappedBinding: Binder<Void> {
+        return Binder(base) { viewController, _ in
+            viewController.coordinator?.openRegistrationCoordinator()
+        }
+    }
+}

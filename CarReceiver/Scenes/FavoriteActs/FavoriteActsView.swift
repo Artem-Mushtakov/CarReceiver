@@ -16,7 +16,7 @@ class FavoriteActsView: BaseView {
     // MARK: - Ui elements
 
     private lazy var testLabel = UILabel().then {
-        $0.text = "FavoriteActsView"
+        $0.text = "Избранные Акты"
         $0.font = .boldSystemFont(ofSize: 17)
     }
 

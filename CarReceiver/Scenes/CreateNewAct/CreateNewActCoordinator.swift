@@ -13,7 +13,7 @@ class CreateNewActCoordinator: BaseCoordinator, CreateNewActCoordinatorFlow {
 
     weak var navigationController: UINavigationController?
 
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
     }
 

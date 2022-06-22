@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol AllActsCoordinatorFlow: AnyObject { }
+protocol AllActsCoordinatorFlow: AnyObject {
+    func openCreateNewAct()
+}
 
 class AllActsCoordinator: BaseCoordinator, AllActsCoordinatorFlow {
 
@@ -24,4 +26,9 @@ class AllActsCoordinator: BaseCoordinator, AllActsCoordinatorFlow {
     }
 
     // MARK: - Flow Methods
+
+    func openCreateNewAct() {
+        let createNewActViewCoordinator = CreateNewActCoordinator(navigationController: navigationController)
+        coordinate(to: createNewActViewCoordinator)
+    }
 }
