@@ -46,6 +46,8 @@
 		ACCD765C28625F5700376095 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD765B28625F5700376095 /* ResetPasswordViewController.swift */; };
 		ACCD765E28625F5D00376095 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD765D28625F5D00376095 /* ResetPasswordView.swift */; };
 		ACCD766028625F6900376095 /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD765F28625F6900376095 /* ResetPasswordCoordinator.swift */; };
+		ACCD767D286A3D0E00376095 /* CustomTransitionsAnimates.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD767C286A3D0E00376095 /* CustomTransitionsAnimates.swift */; };
+		ACCD767F286A3D5600376095 /* CustomTransitionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD767E286A3D5600376095 /* CustomTransitionsDelegate.swift */; };
 		ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532C28591C210069C031 /* AppDelegate.swift */; };
 		ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532E28591C210069C031 /* SceneDelegate.swift */; };
 		ACE9533128591C210069C031 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9533028591C210069C031 /* LoginViewController.swift */; };
@@ -100,6 +102,8 @@
 		ACCD765B28625F5700376095 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		ACCD765D28625F5D00376095 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		ACCD765F28625F6900376095 /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
+		ACCD767C286A3D0E00376095 /* CustomTransitionsAnimates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsAnimates.swift; sourceTree = "<group>"; };
+		ACCD767E286A3D5600376095 /* CustomTransitionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsDelegate.swift; sourceTree = "<group>"; };
 		ACE9532928591C210069C031 /* CarReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE9532C28591C210069C031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE9532E28591C210069C031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				AC9FBBD9285BA58C006AF720 /* CustomTextField.swift */,
+				ACCD767C286A3D0E00376095 /* CustomTransitionsAnimates.swift */,
+				ACCD767E286A3D5600376095 /* CustomTransitionsDelegate.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -517,6 +523,7 @@
 			files = (
 				ACCD764F286257F100376095 /* DetailActViewController.swift in Sources */,
 				5C54E6AA285F5C4D003FFCEF /* Validator.swift in Sources */,
+				ACCD767D286A3D0E00376095 /* CustomTransitionsAnimates.swift in Sources */,
 				ACCD7641286257AB00376095 /* AllActsCoordinator.swift in Sources */,
 				ACCD76362862562C00376095 /* MainTabBarCoordinator.swift in Sources */,
 				ACCD762B286251D200376095 /* BaseCoordinator.swift in Sources */,
@@ -552,6 +559,7 @@
 				ACCD7647286257C900376095 /* FavoriteActsCoordinator.swift in Sources */,
 				ACCD761E2860F76F00376095 /* LoginView.swift in Sources */,
 				ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */,
+				ACCD767F286A3D5600376095 /* CustomTransitionsDelegate.swift in Sources */,
 				ACCD76552862580D00376095 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

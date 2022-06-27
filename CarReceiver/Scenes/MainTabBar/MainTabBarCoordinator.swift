@@ -15,38 +15,27 @@ class MainTabBarCoordinator: BaseCoordinator {
         self.navigationController = navigationController
     }
 
-    // FIXME: - Придумать как отптимизировать эту функцию (может сделать функцию для создания каждого контроллера и координатора табБара)
     func start() {
+
         let mainTabBarController = MainTabBarController()
         mainTabBarController.coordinator = self
 
-        let allActsNavigationController = UINavigationController()
-        allActsNavigationController.tabBarItem = UITabBarItem(title: "Все",
-                                                              image: UIImage(systemName: "car.2"),
-                                                              tag: 0)
-
+        /// All screen
+        let allActsNavigationController = createNavigationController(title: "Все", itemImageName: "car.2", tag: 0)
         let allActsCoordinator = AllActsCoordinator(navigationController: allActsNavigationController)
 
-        let favoriteActsNavigationController = UINavigationController()
-        favoriteActsNavigationController.tabBarItem = UITabBarItem(title: "Избранные",
-                                                                   image: UIImage(systemName: "car"),
-                                                                   tag: 1)
-
+        /// Favorite screen
+        let favoriteActsNavigationController = createNavigationController(title: "Избранные", itemImageName: "car", tag: 1)
         let favoriteActsCoordinator = FavoriteActsCoordinator(navigationController: favoriteActsNavigationController)
 
-        let settingsNavigationController = UINavigationController()
-        settingsNavigationController.tabBarItem = UITabBarItem(title: "Настройки",
-                                                               image: UIImage(systemName: "gearshape.fill"),
-                                                               tag: 2)
-
+        /// Settings screen
+        let settingsNavigationController = createNavigationController(title: "Настройки", itemImageName: "gearshape.fill", tag: 2)
         let settingsCoordinator = SettingsCoordinator(navigationController: settingsNavigationController)
 
-        mainTabBarController.viewControllers = [allActsNavigationController,
-                                                favoriteActsNavigationController,
-                                                settingsNavigationController]
+        mainTabBarController.viewControllers = [allActsNavigationController, favoriteActsNavigationController, settingsNavigationController]
         
         mainTabBarController.modalPresentationStyle = .fullScreen
-        mainTabBarController.modalTransitionStyle = .flipHorizontal
+        mainTabBarController.transitioningDelegate = mainTabBarController.customTransitionsDelegate
         navigationController?.present(mainTabBarController, animated: true, completion: nil)
 
         coordinate(to: allActsCoordinator)
@@ -55,4 +44,11 @@ class MainTabBarCoordinator: BaseCoordinator {
     }
 
     // MARK: - Setup function MainTabBarCoordinator
+
+    private func createNavigationController(title: String, itemImageName: String, tag: Int) -> UINavigationController {
+        guard let image = UIImage(systemName: itemImageName) else { return UINavigationController() }
+        let navigationController = UINavigationController()
+        navigationController.tabBarItem = UITabBarItem(title: title, image: image, tag: tag)
+        return navigationController
+    }
 }

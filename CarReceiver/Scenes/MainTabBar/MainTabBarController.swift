@@ -12,6 +12,7 @@ class MainTabBarController: UITabBarController {
     // MARK: - Properties
 
     var coordinator: MainTabBarCoordinator?
+    var customTransitionsDelegate = CustomTransitionsDelegate()
 
     // MARK: - Lifecycle
     

@@ -38,7 +38,7 @@ class SettingsView: BaseView {
     private lazy var changePrefixActNumber = createTextField(plaseholder: "Акт префикс")
     private lazy var saveSettingsButton = createButton(setTitle: "Сохранить")
 
-    let removeAccountButton = UIButton().then {
+    private lazy var removeAccountButton = UIButton().then {
         $0.setTitle("Удалить аккаунт", for: .normal)
         $0.titleLabel?.font = R.font.nunitoBold(size: 18)
         $0.setTitleColor(.black, for: .normal)

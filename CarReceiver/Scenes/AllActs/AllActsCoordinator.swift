@@ -22,7 +22,8 @@ class AllActsCoordinator: BaseCoordinator, AllActsCoordinatorFlow {
     func start() {
         let allActsViewController = AllActsViewController()
         allActsViewController.coordinator = self
-        navigationController?.pushViewController(allActsViewController, animated: true)
+        /// animated false for custom transitions animates
+        navigationController?.pushViewController(allActsViewController, animated: false)
     }
 
     // MARK: - Flow Methods
