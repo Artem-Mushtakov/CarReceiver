@@ -31,7 +31,7 @@ class LoginView: BaseView {
     private lazy var loginTextField = CustomTextField(false).then {
         $0.placeholder = "Введите логин"
         $0.font = R.font.nunitoRegular(size: 14)
-        $0.tintColor = .lightGray
+        $0.tintColor = .gray
     }
 
     private lazy var passwordTextField = CustomTextField(true).then {
