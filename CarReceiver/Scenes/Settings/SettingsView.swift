@@ -32,10 +32,10 @@ class SettingsView: BaseView {
     }
 
     private lazy var unlockSettingsButton = createButton(setTitle: "Разблокировать для изменения")
-    private lazy var changeOrganizationName = createTextField(plaseholder: "Название организации")
-    private lazy var changeOrganizationAddress = createTextField(plaseholder: "Адрес организации")
-    private lazy var changeOrganizationPhone = createTextField(plaseholder: "Контактный телефон")
-    private lazy var changePrefixActNumber = createTextField(plaseholder: "Акт префикс")
+    private lazy var changeOrganizationName = CustomTextField(isNeedSecure: false, placeholderTextField: "Название организации")
+    private lazy var changeOrganizationAddress = CustomTextField(isNeedSecure: false, placeholderTextField: "Адрес организации")
+    private lazy var changeOrganizationPhone = CustomTextField(isNeedSecure: false, placeholderTextField: "Контактный телефон")
+    private lazy var changePrefixActNumber = CustomTextField(isNeedSecure: false, placeholderTextField: "Акт префикс")
     private lazy var saveSettingsButton = createButton(setTitle: "Сохранить")
 
     private lazy var removeAccountButton = UIButton().then {
@@ -120,16 +120,6 @@ class SettingsView: BaseView {
     }
 
     // MARK: - Create ui function
-
-    private func createTextField(plaseholder: String) -> UITextField {
-
-        let textField = CustomTextField(false).then {
-            $0.placeholder = plaseholder
-            $0.font = R.font.nunitoRegular(size: 17)
-            $0.tintColor = .gray
-        }
-        return textField
-    }
 
     private func createButton(setTitle: String) -> UIButton {
         let button = UIButton().then {

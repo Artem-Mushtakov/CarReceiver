@@ -28,29 +28,10 @@ class RegistrationView: BaseView {
         $0.tintColor = R.color.orangeColor()?.withAlphaComponent(0.6)
     }
 
-    private lazy var loginTextField = CustomTextField(false).then {
-        $0.placeholder = "Введите логин или email"
-        $0.font = R.font.nunitoRegular(size: 14)
-        $0.tintColor = .gray
-    }
-
-    private lazy var organizationNameTextField = CustomTextField(false).then {
-        $0.placeholder = "Название организации"
-        $0.font = R.font.nunitoRegular(size: 14)
-        $0.tintColor = .gray
-    }
-
-    private lazy var passwordTextField = CustomTextField(true).then {
-        $0.placeholder = "Введите пароль"
-        $0.font = R.font.nunitoRegular(size: 14)
-        $0.tintColor = .gray
-    }
-
-    private lazy var repeatThePassword = CustomTextField(true).then {
-        $0.placeholder = "Повторите ввод пароля"
-        $0.font = R.font.nunitoRegular(size: 14)
-        $0.tintColor = .gray
-    }
+    private lazy var loginTextField = CustomTextField(isNeedSecure: false, placeholderTextField: "Введите логин или email")
+    private lazy var organizationNameTextField = CustomTextField(isNeedSecure: false, placeholderTextField: "Название организации")
+    private lazy var passwordTextField = CustomTextField(isNeedSecure: true, placeholderTextField: "Введите пароль")
+    private lazy var repeatThePassword = CustomTextField(isNeedSecure: true, placeholderTextField: "Повторите ввод пароля")
 
     private lazy var registerButton = UIButton(type: .system).then {
         $0.setTitle("Зарегистрироваться", for: .normal)

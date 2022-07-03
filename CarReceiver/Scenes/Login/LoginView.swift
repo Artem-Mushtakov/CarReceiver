@@ -28,17 +28,8 @@ class LoginView: BaseView {
         $0.tintColor = R.color.orangeColor()?.withAlphaComponent(0.6)
     }
 
-    private lazy var loginTextField = CustomTextField(false).then {
-        $0.placeholder = "Введите логин"
-        $0.font = R.font.nunitoRegular(size: 14)
-        $0.tintColor = .gray
-    }
-
-    private lazy var passwordTextField = CustomTextField(true).then {
-        $0.placeholder = "Введите пароль"
-        $0.font = R.font.nunitoRegular(size: 14)
-        $0.tintColor = .gray
-    }
+    private lazy var loginTextField = CustomTextField(isNeedSecure: false, placeholderTextField: "Введите логин")
+    private lazy var passwordTextField = CustomTextField(isNeedSecure: true, placeholderTextField: "Введите пароль")
 
     private lazy var resetPassword = UIButton().then {
         $0.setTitle("Забыли пароль?", for: .normal)

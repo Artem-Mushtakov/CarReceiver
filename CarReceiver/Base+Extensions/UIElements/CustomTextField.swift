@@ -12,11 +12,19 @@ class CustomTextField: UITextField {
     // MARK: - Initial
 
     private var isNeedSecure: Bool
-    
-    init(_ isNeedSecure: Bool) {
+
+    // Password init
+    init(isNeedSecure: Bool, placeholderTextField: String?) {
         self.isNeedSecure = isNeedSecure
         super.init(frame: .zero)
-        setup()
+        setupTextField(placeholderTextField: placeholderTextField, delegate: nil)
+    }
+
+    // Delegate init
+    init(isNeedSecure: Bool, placeholderTextField: String?, delegate: UITextFieldDelegate?) {
+        self.isNeedSecure = isNeedSecure
+        super.init(frame: .zero)
+        setupTextField(placeholderTextField: placeholderTextField, delegate: delegate)
     }
     
     required init?(coder: NSCoder) {
@@ -25,8 +33,12 @@ class CustomTextField: UITextField {
 
     // MARK: - Setup
 
-    private func setup() {
+    private func setupTextField(placeholderTextField: String?, delegate: UITextFieldDelegate?) {
         self.isSecureTextEntry = isNeedSecure
+        self.placeholder = placeholderTextField
+        self.delegate = delegate
+        self.font = R.font.nunitoRegular(size: 14)
+        self.tintColor = .gray
         setupTextFieldView()
     }
 

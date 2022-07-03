@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AllActsCoordinatorFlow: AnyObject {
-    func openCreateNewAct()
+    func openCustomerData()
 }
 
 class AllActsCoordinator: BaseCoordinator, AllActsCoordinatorFlow {
@@ -28,8 +28,8 @@ class AllActsCoordinator: BaseCoordinator, AllActsCoordinatorFlow {
 
     // MARK: - Flow Methods
 
-    func openCreateNewAct() {
-        let createNewActViewCoordinator = CreateNewActCoordinator(navigationController: navigationController)
-        coordinate(to: createNewActViewCoordinator)
+    func openCustomerData() {
+        let customerDataViewCoordinator = CustomerDataCoordinator(navigationController: navigationController)
+        coordinate(to: customerDataViewCoordinator)
     }
 }

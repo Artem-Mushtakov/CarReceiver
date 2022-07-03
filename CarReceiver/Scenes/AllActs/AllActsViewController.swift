@@ -23,22 +23,23 @@ class AllActsViewController: BaseViewController<AllActsView> {
         self.setupNavigationBar()
     }
 
+    // MARK: - Private func
+
     private func setupNavigationBar() {
 
         title = "Все акты"
         navigationController?.navigationBar.tintColor = .white
-
-        /// create right button navBar (create New Act)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add)
-        navigationItem.rightBarButtonItem?.tintColor = .red
-        navigationItem.rightBarButtonItem?.rx.tap
-            .bind(to: rx.openCreateNewActModuleBinding)
-            .disposed(by: disposeBag)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: contentView.barButtonItem) 
     }
 
     // MARK: - Binding
     
-    override func setupBindingInput() { }
+    override func setupBindingInput() {
+
+        contentView.tapBarButtonItemPublisher
+            .bind(to: rx.openCreateNewActModuleBinding)
+            .disposed(by: disposeBag)
+    }
 }
 
 // MARK: - Extension Reactive
@@ -47,7 +48,7 @@ extension Reactive where Base: AllActsViewController {
 
     var openCreateNewActModuleBinding: Binder<Void> {
         return Binder(base) { viewController, _ in
-            viewController.coordinator?.openCreateNewAct()
+            viewController.coordinator?.openCustomerData()
         }
     }
 }

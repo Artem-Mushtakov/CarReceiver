@@ -13,7 +13,15 @@ class AllActsView: BaseView {
 
     // MARK: - Properties
 
+    var tapBarButtonItemPublisher = PublishSubject<Void>()
+    
     // MARK: - Ui elements
+
+    lazy var barButtonItem = NextStepButton(setTitle: "Создать новый АКТ").then {
+        $0.frame.size.width = 200
+        $0.backgroundColor = .lightText
+        $0.layer.masksToBounds = false
+    }
 
     private lazy var testLabel = UILabel().then {
         $0.text = "Все акты"
@@ -36,5 +44,10 @@ class AllActsView: BaseView {
 
     // MARK: - Binding
 
-    override func setupBindingOutput() { }
+    override func setupBindingOutput() {
+
+        barButtonItem.rx.tap
+            .bind(to: tapBarButtonItemPublisher)
+            .disposed(by: disposeBag)
+    }
 }
