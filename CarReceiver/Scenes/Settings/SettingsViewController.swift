@@ -13,8 +13,6 @@ class SettingsViewController: BaseViewController<SettingsView> {
 
     // MARK: - Properties
 
-    var coordinator: SettingsCoordinatorFlow?
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {

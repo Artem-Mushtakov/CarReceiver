@@ -13,8 +13,6 @@ class FavoriteActsViewController: BaseViewController<FavoriteActsView> {
 
     // MARK: - Properties
 
-    var coordinator: FavoriteActsCoordinatorFlow?
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {

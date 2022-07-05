@@ -22,50 +22,37 @@
 		ACCD76192860EBC300376095 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76182860EBC300376095 /* BaseView.swift */; };
 		ACCD761B2860F05700376095 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD761A2860F05600376095 /* RegistrationView.swift */; };
 		ACCD761E2860F76F00376095 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD761D2860F76F00376095 /* LoginView.swift */; };
-		ACCD76292862515E00376095 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76282862515E00376095 /* AppCoordinator.swift */; };
-		ACCD762B286251D200376095 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD762A286251D200376095 /* BaseCoordinator.swift */; };
-		ACCD762F286253DE00376095 /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD762E286253DE00376095 /* RegistrationCoordinator.swift */; };
-		ACCD76312862549200376095 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76302862549200376095 /* LoginCoordinator.swift */; };
 		ACCD76342862560E00376095 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76332862560E00376095 /* MainTabBarController.swift */; };
-		ACCD76362862562C00376095 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76352862562C00376095 /* MainTabBarCoordinator.swift */; };
 		ACCD763D2862579400376095 /* AllActsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD763C2862579400376095 /* AllActsViewController.swift */; };
 		ACCD763F286257A000376095 /* AllActsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD763E286257A000376095 /* AllActsView.swift */; };
-		ACCD7641286257AB00376095 /* AllActsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7640286257AB00376095 /* AllActsCoordinator.swift */; };
 		ACCD7643286257BA00376095 /* FavoriteActsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7642286257BA00376095 /* FavoriteActsViewController.swift */; };
 		ACCD7645286257C100376095 /* FavoriteActsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7644286257C100376095 /* FavoriteActsView.swift */; };
-		ACCD7647286257C900376095 /* FavoriteActsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7646286257C900376095 /* FavoriteActsCoordinator.swift */; };
 		ACCD7649286257D500376095 /* CustomerDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7648286257D500376095 /* CustomerDataViewController.swift */; };
 		ACCD764B286257DE00376095 /* CustomerDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD764A286257DE00376095 /* CustomerDataView.swift */; };
-		ACCD764D286257E600376095 /* CustomerDataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD764C286257E600376095 /* CustomerDataCoordinator.swift */; };
 		ACCD764F286257F100376095 /* DetailActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD764E286257F100376095 /* DetailActViewController.swift */; };
 		ACCD7651286257F600376095 /* DetailActView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7650286257F600376095 /* DetailActView.swift */; };
-		ACCD7653286257FE00376095 /* DetailActCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7652286257FE00376095 /* DetailActCoordinator.swift */; };
 		ACCD76552862580D00376095 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76542862580D00376095 /* SettingsViewController.swift */; };
 		ACCD76572862581300376095 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76562862581300376095 /* SettingsView.swift */; };
-		ACCD76592862581B00376095 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76582862581B00376095 /* SettingsCoordinator.swift */; };
 		ACCD765C28625F5700376095 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD765B28625F5700376095 /* ResetPasswordViewController.swift */; };
 		ACCD765E28625F5D00376095 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD765D28625F5D00376095 /* ResetPasswordView.swift */; };
-		ACCD766028625F6900376095 /* ResetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD765F28625F6900376095 /* ResetPasswordCoordinator.swift */; };
 		ACCD767D286A3D0E00376095 /* CustomTransitionsAnimates.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD767C286A3D0E00376095 /* CustomTransitionsAnimates.swift */; };
 		ACCD767F286A3D5600376095 /* CustomTransitionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD767E286A3D5600376095 /* CustomTransitionsDelegate.swift */; };
 		ACCD76EF287196DF00376095 /* CarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76EE287196DF00376095 /* CarInformationViewController.swift */; };
 		ACCD76F1287196E500376095 /* CarInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76F0287196E500376095 /* CarInformationView.swift */; };
-		ACCD76F3287196F200376095 /* CarInformationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76F2287196F100376095 /* CarInformationCoordinator.swift */; };
 		ACCD76F628719C5600376095 /* VisualInspectionCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76F528719C5600376095 /* VisualInspectionCarViewController.swift */; };
 		ACCD76F828719C5F00376095 /* VisualInspectionCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76F728719C5F00376095 /* VisualInspectionCarView.swift */; };
-		ACCD76FA28719C6C00376095 /* VisualInspectionCarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76F928719C6C00376095 /* VisualInspectionCarCoordinator.swift */; };
 		ACCD76FD28719CA600376095 /* DetailVisualInspectionCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76FC28719CA600376095 /* DetailVisualInspectionCarViewController.swift */; };
 		ACCD76FF28719CAC00376095 /* DetailVisualInspectionCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD76FE28719CAC00376095 /* DetailVisualInspectionCarView.swift */; };
-		ACCD770128719CB400376095 /* DetailVisualInspectionCarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD770028719CB400376095 /* DetailVisualInspectionCarCoordinator.swift */; };
 		ACCD770428719D0A00376095 /* InternalInspectionCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD770328719D0A00376095 /* InternalInspectionCarViewController.swift */; };
 		ACCD770628719D0F00376095 /* InternalInspectionCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD770528719D0F00376095 /* InternalInspectionCarView.swift */; };
-		ACCD770828719D1700376095 /* InternalInspectionCarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD770728719D1700376095 /* InternalInspectionCarCoordinator.swift */; };
 		ACCD770B28719D4400376095 /* FinishNewActViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD770A28719D4400376095 /* FinishNewActViewController.swift */; };
 		ACCD770D28719D4B00376095 /* FinishNewActView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD770C28719D4B00376095 /* FinishNewActView.swift */; };
-		ACCD770F28719D5200376095 /* FinishNewActCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD770E28719D5200376095 /* FinishNewActCoordinator.swift */; };
 		ACCD77112871A71200376095 /* NextStepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD77102871A71200376095 /* NextStepButton.swift */; };
 		ACCD77132871B55300376095 /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD77122871B55300376095 /* CustomTextLabel.swift */; };
 		ACCD7716287210DC00376095 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7715287210DC00376095 /* UINavigationController+Extension.swift */; };
+		ACCD7718287215F300376095 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD7717287215F300376095 /* AppContainer.swift */; };
+		ACCD771B2872166B00376095 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = ACCD771A2872166B00376095 /* Swinject */; };
+		ACCD771E287218B500376095 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = ACCD771D287218B500376095 /* SwinjectAutoregistration */; };
 		ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532C28591C210069C031 /* AppDelegate.swift */; };
 		ACE9532F28591C210069C031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9532E28591C210069C031 /* SceneDelegate.swift */; };
 		ACE9533128591C210069C031 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE9533028591C210069C031 /* LoginViewController.swift */; };
@@ -96,50 +83,35 @@
 		ACCD76182860EBC300376095 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		ACCD761A2860F05600376095 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		ACCD761D2860F76F00376095 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		ACCD76282862515E00376095 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		ACCD762A286251D200376095 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		ACCD762E286253DE00376095 /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
-		ACCD76302862549200376095 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		ACCD76332862560E00376095 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		ACCD76352862562C00376095 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		ACCD763C2862579400376095 /* AllActsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActsViewController.swift; sourceTree = "<group>"; };
 		ACCD763E286257A000376095 /* AllActsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActsView.swift; sourceTree = "<group>"; };
-		ACCD7640286257AB00376095 /* AllActsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActsCoordinator.swift; sourceTree = "<group>"; };
 		ACCD7642286257BA00376095 /* FavoriteActsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteActsViewController.swift; sourceTree = "<group>"; };
 		ACCD7644286257C100376095 /* FavoriteActsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteActsView.swift; sourceTree = "<group>"; };
-		ACCD7646286257C900376095 /* FavoriteActsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteActsCoordinator.swift; sourceTree = "<group>"; };
 		ACCD7648286257D500376095 /* CustomerDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDataViewController.swift; sourceTree = "<group>"; };
 		ACCD764A286257DE00376095 /* CustomerDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDataView.swift; sourceTree = "<group>"; };
-		ACCD764C286257E600376095 /* CustomerDataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDataCoordinator.swift; sourceTree = "<group>"; };
 		ACCD764E286257F100376095 /* DetailActViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActViewController.swift; sourceTree = "<group>"; };
 		ACCD7650286257F600376095 /* DetailActView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActView.swift; sourceTree = "<group>"; };
-		ACCD7652286257FE00376095 /* DetailActCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActCoordinator.swift; sourceTree = "<group>"; };
 		ACCD76542862580D00376095 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ACCD76562862581300376095 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		ACCD76582862581B00376095 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		ACCD765B28625F5700376095 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		ACCD765D28625F5D00376095 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
-		ACCD765F28625F6900376095 /* ResetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordCoordinator.swift; sourceTree = "<group>"; };
 		ACCD767C286A3D0E00376095 /* CustomTransitionsAnimates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsAnimates.swift; sourceTree = "<group>"; };
 		ACCD767E286A3D5600376095 /* CustomTransitionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsDelegate.swift; sourceTree = "<group>"; };
 		ACCD76EE287196DF00376095 /* CarInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInformationViewController.swift; sourceTree = "<group>"; };
 		ACCD76F0287196E500376095 /* CarInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInformationView.swift; sourceTree = "<group>"; };
-		ACCD76F2287196F100376095 /* CarInformationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInformationCoordinator.swift; sourceTree = "<group>"; };
 		ACCD76F528719C5600376095 /* VisualInspectionCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualInspectionCarViewController.swift; sourceTree = "<group>"; };
 		ACCD76F728719C5F00376095 /* VisualInspectionCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualInspectionCarView.swift; sourceTree = "<group>"; };
-		ACCD76F928719C6C00376095 /* VisualInspectionCarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualInspectionCarCoordinator.swift; sourceTree = "<group>"; };
 		ACCD76FC28719CA600376095 /* DetailVisualInspectionCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVisualInspectionCarViewController.swift; sourceTree = "<group>"; };
 		ACCD76FE28719CAC00376095 /* DetailVisualInspectionCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVisualInspectionCarView.swift; sourceTree = "<group>"; };
-		ACCD770028719CB400376095 /* DetailVisualInspectionCarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVisualInspectionCarCoordinator.swift; sourceTree = "<group>"; };
 		ACCD770328719D0A00376095 /* InternalInspectionCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalInspectionCarViewController.swift; sourceTree = "<group>"; };
 		ACCD770528719D0F00376095 /* InternalInspectionCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalInspectionCarView.swift; sourceTree = "<group>"; };
-		ACCD770728719D1700376095 /* InternalInspectionCarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalInspectionCarCoordinator.swift; sourceTree = "<group>"; };
 		ACCD770A28719D4400376095 /* FinishNewActViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishNewActViewController.swift; sourceTree = "<group>"; };
 		ACCD770C28719D4B00376095 /* FinishNewActView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishNewActView.swift; sourceTree = "<group>"; };
-		ACCD770E28719D5200376095 /* FinishNewActCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishNewActCoordinator.swift; sourceTree = "<group>"; };
 		ACCD77102871A71200376095 /* NextStepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextStepButton.swift; sourceTree = "<group>"; };
 		ACCD77122871B55300376095 /* CustomTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
 		ACCD7715287210DC00376095 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		ACCD7717287215F300376095 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		ACE9532928591C210069C031 /* CarReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE9532C28591C210069C031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE9532E28591C210069C031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,11 +127,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCD771E287218B500376095 /* SwinjectAutoregistration in Frameworks */,
 				ACE9534B285924AD0069C031 /* SnapKit in Frameworks */,
 				ACE95348285924920069C031 /* RxSwift in Frameworks */,
 				ACE95346285924920069C031 /* RxCocoa in Frameworks */,
 				ACE9534E285925070069C031 /* Then in Frameworks */,
 				5AC9EF35DE83FCB256C0FF8A /* Pods_CarReceiver.framework in Frameworks */,
+				ACCD771B2872166B00376095 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,13 +174,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC61E7AF2874C2AF00C0F15F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5C54E6A8285F5C3C003FFCEF /* Services */,
+				5C54E6AB285F5C50003FFCEF /* Helpers */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AC61E7B02874C5C800C0F15F /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ACE9533728591C230069C031 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		AC61E7B12874C5D700C0F15F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5CC59645285F547D0033CAE5 /* GoogleService-Info.plist */,
+				ACE9533A28591C230069C031 /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		AC9FBBCD285A7330006AF720 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				ACE9533028591C210069C031 /* LoginViewController.swift */,
 				ACCD761D2860F76F00376095 /* LoginView.swift */,
 				AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */,
-				ACCD76302862549200376095 /* LoginCoordinator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -238,7 +237,6 @@
 			children = (
 				ACCD760D285F9BC400376095 /* RegistrationViewController.swift */,
 				ACCD761A2860F05600376095 /* RegistrationView.swift */,
-				ACCD762E286253DE00376095 /* RegistrationCoordinator.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -248,7 +246,6 @@
 			children = (
 				ACCD76142860E3D400376095 /* BaseViewController.swift */,
 				ACCD76182860EBC300376095 /* BaseView.swift */,
-				ACCD762A286251D200376095 /* BaseCoordinator.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -257,7 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				ACCD76332862560E00376095 /* MainTabBarController.swift */,
-				ACCD76352862562C00376095 /* MainTabBarCoordinator.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -267,7 +263,6 @@
 			children = (
 				ACCD763C2862579400376095 /* AllActsViewController.swift */,
 				ACCD763E286257A000376095 /* AllActsView.swift */,
-				ACCD7640286257AB00376095 /* AllActsCoordinator.swift */,
 			);
 			path = AllActs;
 			sourceTree = "<group>";
@@ -277,7 +272,6 @@
 			children = (
 				ACCD7642286257BA00376095 /* FavoriteActsViewController.swift */,
 				ACCD7644286257C100376095 /* FavoriteActsView.swift */,
-				ACCD7646286257C900376095 /* FavoriteActsCoordinator.swift */,
 			);
 			path = FavoriteActs;
 			sourceTree = "<group>";
@@ -287,7 +281,6 @@
 			children = (
 				ACCD76542862580D00376095 /* SettingsViewController.swift */,
 				ACCD76562862581300376095 /* SettingsView.swift */,
-				ACCD76582862581B00376095 /* SettingsCoordinator.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -297,12 +290,11 @@
 			children = (
 				ACCD764E286257F100376095 /* DetailActViewController.swift */,
 				ACCD7650286257F600376095 /* DetailActView.swift */,
-				ACCD7652286257FE00376095 /* DetailActCoordinator.swift */,
 			);
 			path = DetailAct;
 			sourceTree = "<group>";
 		};
-		ACCD763B2862577500376095 /* CreateNewAct */ = {
+		ACCD763B2862577500376095 /* CreateNewActFlow */ = {
 			isa = PBXGroup;
 			children = (
 				ACCD76EC2871968400376095 /* CustomerData */,
@@ -312,7 +304,7 @@
 				ACCD770228719CCD00376095 /* InternalInspectionCar */,
 				ACCD770928719D2F00376095 /* FinishNewAct */,
 			);
-			path = CreateNewAct;
+			path = CreateNewActFlow;
 			sourceTree = "<group>";
 		};
 		ACCD765A28625F4200376095 /* ResetPassword */ = {
@@ -320,7 +312,6 @@
 			children = (
 				ACCD765B28625F5700376095 /* ResetPasswordViewController.swift */,
 				ACCD765D28625F5D00376095 /* ResetPasswordView.swift */,
-				ACCD765F28625F6900376095 /* ResetPasswordCoordinator.swift */,
 			);
 			path = ResetPassword;
 			sourceTree = "<group>";
@@ -330,7 +321,6 @@
 			children = (
 				ACCD7648286257D500376095 /* CustomerDataViewController.swift */,
 				ACCD764A286257DE00376095 /* CustomerDataView.swift */,
-				ACCD764C286257E600376095 /* CustomerDataCoordinator.swift */,
 			);
 			path = CustomerData;
 			sourceTree = "<group>";
@@ -340,7 +330,6 @@
 			children = (
 				ACCD76EE287196DF00376095 /* CarInformationViewController.swift */,
 				ACCD76F0287196E500376095 /* CarInformationView.swift */,
-				ACCD76F2287196F100376095 /* CarInformationCoordinator.swift */,
 			);
 			path = "СarInformation";
 			sourceTree = "<group>";
@@ -350,7 +339,6 @@
 			children = (
 				ACCD76F528719C5600376095 /* VisualInspectionCarViewController.swift */,
 				ACCD76F728719C5F00376095 /* VisualInspectionCarView.swift */,
-				ACCD76F928719C6C00376095 /* VisualInspectionCarCoordinator.swift */,
 			);
 			path = VisualInspectionCar;
 			sourceTree = "<group>";
@@ -360,7 +348,6 @@
 			children = (
 				ACCD76FC28719CA600376095 /* DetailVisualInspectionCarViewController.swift */,
 				ACCD76FE28719CAC00376095 /* DetailVisualInspectionCarView.swift */,
-				ACCD770028719CB400376095 /* DetailVisualInspectionCarCoordinator.swift */,
 			);
 			path = DetailVisualInspectionCar;
 			sourceTree = "<group>";
@@ -370,7 +357,6 @@
 			children = (
 				ACCD770328719D0A00376095 /* InternalInspectionCarViewController.swift */,
 				ACCD770528719D0F00376095 /* InternalInspectionCarView.swift */,
-				ACCD770728719D1700376095 /* InternalInspectionCarCoordinator.swift */,
 			);
 			path = InternalInspectionCar;
 			sourceTree = "<group>";
@@ -380,7 +366,6 @@
 			children = (
 				ACCD770A28719D4400376095 /* FinishNewActViewController.swift */,
 				ACCD770C28719D4B00376095 /* FinishNewActView.swift */,
-				ACCD770E28719D5200376095 /* FinishNewActCoordinator.swift */,
 			);
 			path = FinishNewAct;
 			sourceTree = "<group>";
@@ -414,13 +399,11 @@
 		ACE9532B28591C210069C031 /* CarReceiver */ = {
 			isa = PBXGroup;
 			children = (
-				5CC59645285F547D0033CAE5 /* GoogleService-Info.plist */,
 				ACE9534228591EE20069C031 /* App */,
-				ACE953612859A08D0069C031 /* Base+Extensions */,
+				AC61E7AF2874C2AF00C0F15F /* Network */,
 				ACE9534328591EE80069C031 /* Scenes */,
+				ACE953612859A08D0069C031 /* Base+Extensions */,
 				ACE9534128591EC90069C031 /* Resources */,
-				5C54E6A8285F5C3C003FFCEF /* Services */,
-				5C54E6AB285F5C50003FFCEF /* Helpers */,
 			);
 			path = CarReceiver;
 			sourceTree = "<group>";
@@ -438,11 +421,10 @@
 		ACE9534228591EE20069C031 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				ACCD76282862515E00376095 /* AppCoordinator.swift */,
+				ACCD7717287215F300376095 /* AppContainer.swift */,
 				ACE9532C28591C210069C031 /* AppDelegate.swift */,
 				ACE9532E28591C210069C031 /* SceneDelegate.swift */,
-				ACE9533728591C230069C031 /* LaunchScreen.storyboard */,
-				ACE9533A28591C230069C031 /* Info.plist */,
+				AC61E7B12874C5D700C0F15F /* Settings */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -450,13 +432,14 @@
 		ACE9534328591EE80069C031 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AC61E7B02874C5C800C0F15F /* LaunchScreen */,
 				AC9FBBCD285A7330006AF720 /* Login */,
 				ACCD760C285F9BA600376095 /* Registration */,
 				ACCD765A28625F4200376095 /* ResetPassword */,
 				ACCD7632286255D400376095 /* MainTabBar */,
 				ACCD7637286256FF00376095 /* AllActs */,
 				ACCD76382862570D00376095 /* FavoriteActs */,
-				ACCD763B2862577500376095 /* CreateNewAct */,
+				ACCD763B2862577500376095 /* CreateNewActFlow */,
 				ACCD763A2862574800376095 /* DetailAct */,
 				ACCD76392862573800376095 /* Settings */,
 			);
@@ -505,6 +488,8 @@
 				ACE95347285924920069C031 /* RxSwift */,
 				ACE9534A285924AD0069C031 /* SnapKit */,
 				ACE9534D285925070069C031 /* Then */,
+				ACCD771A2872166B00376095 /* Swinject */,
+				ACCD771D287218B500376095 /* SwinjectAutoregistration */,
 			);
 			productName = CarReceiver;
 			productReference = ACE9532928591C210069C031 /* CarReceiver.app */;
@@ -538,6 +523,8 @@
 				ACE95344285924920069C031 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				ACE95349285924AD0069C031 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				ACE9534C285925070069C031 /* XCRemoteSwiftPackageReference "Then" */,
+				ACCD77192872166B00376095 /* XCRemoteSwiftPackageReference "Swinject" */,
+				ACCD771C287218B500376095 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 			);
 			productRefGroup = ACE9532A28591C210069C031 /* Products */;
 			projectDirPath = "";
@@ -634,41 +621,28 @@
 				ACCD770628719D0F00376095 /* InternalInspectionCarView.swift in Sources */,
 				ACCD764F286257F100376095 /* DetailActViewController.swift in Sources */,
 				5C54E6AA285F5C4D003FFCEF /* Validator.swift in Sources */,
-				ACCD76F3287196F200376095 /* CarInformationCoordinator.swift in Sources */,
-				ACCD770828719D1700376095 /* InternalInspectionCarCoordinator.swift in Sources */,
+				ACCD7718287215F300376095 /* AppContainer.swift in Sources */,
 				ACCD767D286A3D0E00376095 /* CustomTransitionsAnimates.swift in Sources */,
-				ACCD7641286257AB00376095 /* AllActsCoordinator.swift in Sources */,
-				ACCD76362862562C00376095 /* MainTabBarCoordinator.swift in Sources */,
-				ACCD762B286251D200376095 /* BaseCoordinator.swift in Sources */,
 				ACCD76342862560E00376095 /* MainTabBarController.swift in Sources */,
 				ACCD76572862581300376095 /* SettingsView.swift in Sources */,
 				ACCD763F286257A000376095 /* AllActsView.swift in Sources */,
 				ACE9533128591C210069C031 /* LoginViewController.swift in Sources */,
 				ACCD76EF287196DF00376095 /* CarInformationViewController.swift in Sources */,
 				ACCD765C28625F5700376095 /* ResetPasswordViewController.swift in Sources */,
-				ACCD7653286257FE00376095 /* DetailActCoordinator.swift in Sources */,
-				ACCD762F286253DE00376095 /* RegistrationCoordinator.swift in Sources */,
-				ACCD76292862515E00376095 /* AppCoordinator.swift in Sources */,
 				ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */,
 				5C54E6A7285F5B44003FFCEF /* FirebaseManager.swift in Sources */,
 				ACCD763D2862579400376095 /* AllActsViewController.swift in Sources */,
 				ACCD760E285F9BC400376095 /* RegistrationViewController.swift in Sources */,
 				ACCD7649286257D500376095 /* CustomerDataViewController.swift in Sources */,
-				ACCD76312862549200376095 /* LoginCoordinator.swift in Sources */,
 				ACCD76152860E3D400376095 /* BaseViewController.swift in Sources */,
-				ACCD764D286257E600376095 /* CustomerDataCoordinator.swift in Sources */,
 				ACCD764B286257DE00376095 /* CustomerDataView.swift in Sources */,
-				ACCD766028625F6900376095 /* ResetPasswordCoordinator.swift in Sources */,
 				AC9FBBDA285BA58C006AF720 /* CustomTextField.swift in Sources */,
 				ACCD76F1287196E500376095 /* CarInformationView.swift in Sources */,
-				ACCD770128719CB400376095 /* DetailVisualInspectionCarCoordinator.swift in Sources */,
-				ACCD770F28719D5200376095 /* FinishNewActCoordinator.swift in Sources */,
 				ACCD7645286257C100376095 /* FavoriteActsView.swift in Sources */,
 				ACCD770B28719D4400376095 /* FinishNewActViewController.swift in Sources */,
 				ACCD765E28625F5D00376095 /* ResetPasswordView.swift in Sources */,
 				ACCD770428719D0A00376095 /* InternalInspectionCarViewController.swift in Sources */,
 				ACCD761B2860F05700376095 /* RegistrationView.swift in Sources */,
-				ACCD76FA28719C6C00376095 /* VisualInspectionCarCoordinator.swift in Sources */,
 				ACCD76FD28719CA600376095 /* DetailVisualInspectionCarViewController.swift in Sources */,
 				ACE953602859333A0069C031 /* R.generated.swift in Sources */,
 				ACCD77132871B55300376095 /* CustomTextLabel.swift in Sources */,
@@ -676,12 +650,10 @@
 				ACCD76FF28719CAC00376095 /* DetailVisualInspectionCarView.swift in Sources */,
 				ACCD7643286257BA00376095 /* FavoriteActsViewController.swift in Sources */,
 				ACCD76192860EBC300376095 /* BaseView.swift in Sources */,
-				ACCD76592862581B00376095 /* SettingsCoordinator.swift in Sources */,
 				ACCD76F828719C5F00376095 /* VisualInspectionCarView.swift in Sources */,
 				ACCD7716287210DC00376095 /* UINavigationController+Extension.swift in Sources */,
 				5C54E6AD285F5DC9003FFCEF /* Errors.swift in Sources */,
 				ACCD7651286257F600376095 /* DetailActView.swift in Sources */,
-				ACCD7647286257C900376095 /* FavoriteActsCoordinator.swift in Sources */,
 				ACCD770D28719D4B00376095 /* FinishNewActView.swift in Sources */,
 				ACCD761E2860F76F00376095 /* LoginView.swift in Sources */,
 				ACCD76F628719C5600376095 /* VisualInspectionCarViewController.swift in Sources */,
@@ -828,9 +800,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JC5G892K3F;
+				DEVELOPMENT_TEAM = 8F65V3YM64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CarReceiver/App/Info.plist;
+				INFOPLIST_FILE = CarReceiver/App/Settings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CarReceiver;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -860,7 +832,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JC5G892K3F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CarReceiver/App/Info.plist;
+				INFOPLIST_FILE = CarReceiver/App/Settings/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CarReceiver;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -904,6 +876,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		ACCD77192872166B00376095 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.1;
+			};
+		};
+		ACCD771C287218B500376095 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.1;
+			};
+		};
 		ACE95344285924920069C031 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -931,6 +919,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ACCD771A2872166B00376095 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACCD77192872166B00376095 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		ACCD771D287218B500376095 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACCD771C287218B500376095 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
 		ACE95345285924920069C031 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ACE95344285924920069C031 /* XCRemoteSwiftPackageReference "RxSwift" */;

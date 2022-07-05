@@ -13,8 +13,6 @@ class InternalInspectionCarViewController: BaseViewController<InternalInspection
 
     // MARK: - Properties
 
-    var coordinator: InternalInspectionCarCoordinatorFlow?
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -57,7 +55,8 @@ extension Reactive where Base: InternalInspectionCarViewController {
 
     var openFinishNewActBinding: Binder<Void> {
         return Binder(base) { viewController, _ in
-            viewController.coordinator?.openFinishNewAct()
+            let finishNewActViewController = AppContainer.shared.finishNewActViewController
+            viewController.navigationController?.pushViewController(finishNewActViewController, animated: true)
         }
     }
 }

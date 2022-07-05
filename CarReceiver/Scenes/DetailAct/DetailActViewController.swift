@@ -13,8 +13,6 @@ class DetailActViewController: BaseViewController<DetailActView> {
 
     // MARK: - Properties
 
-    var coordinator: DetailActCoordinatorFlow?
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {

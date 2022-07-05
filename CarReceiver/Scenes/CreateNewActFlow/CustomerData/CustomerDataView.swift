@@ -22,8 +22,8 @@ class CustomerDataView: BaseView {
     // MARK: - Ui elements
 
     private lazy var infoLabel = CustomTextLabel(text: "Для продолжения заполните обязательные поля",
-                                                 font: .boldSystemFont(ofSize: 17),
-                                                 numberOfLines: 3)
+                                                 font: R.font.nunitoBold(size: 17).unsafelyUnwrapped, numberOfLines: 3)
+
     private lazy var clientFullName = CustomTextField(isNeedSecure: false, placeholderTextField: "ФИО - Обязательное поле", delegate: self)
     private lazy var phoneNumber = CustomTextField(isNeedSecure: false, placeholderTextField: "Номер телефона - Обязательное поле", delegate: self)
     private lazy var orderAnOutfit = CustomTextField(isNeedSecure: false, placeholderTextField: "№ - Заказ наряда - Обязательное поле", delegate: self)

@@ -13,8 +13,6 @@ class FinishNewActViewController: BaseViewController<FinishNewActView> {
 
     // MARK: - Properties
 
-    var coordinator: FinishNewActCoordinatorFlow?
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -48,4 +46,3 @@ class FinishNewActViewController: BaseViewController<FinishNewActView> {
 extension Reactive where Base: FinishNewActViewController {
 
 }
-

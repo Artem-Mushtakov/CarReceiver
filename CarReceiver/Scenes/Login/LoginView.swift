@@ -37,25 +37,8 @@ class LoginView: BaseView {
         $0.setTitleColor(.black, for: .normal)
     }
 
-    private lazy var loginButton = UIButton(type: .system).then {
-        $0.setTitle("Войти", for: .normal)
-        $0.titleLabel?.font = R.font.nunitoBold(size: 18)
-        $0.setTitleColor(.black, for: .normal)
-        $0.backgroundColor = .white
-        $0.layer.cornerRadius = 12
-        $0.layer.borderColor = R.color.borderOrange()?.cgColor
-        $0.layer.borderWidth = 2
-    }
-
-    private lazy var registerButton = UIButton(type: .system).then {
-        $0.setTitle("Зарегистрироваться", for: .normal)
-        $0.titleLabel?.font = R.font.nunitoBold(size: 18)
-        $0.setTitleColor(.black, for: .normal)
-        $0.backgroundColor = .white
-        $0.layer.cornerRadius = 12
-        $0.layer.borderColor = R.color.borderOrange()?.cgColor
-        $0.layer.borderWidth = 2
-    }
+    private lazy var loginButton = setupButton(setTitle: "Войти")
+    private lazy var registerButton = setupButton(setTitle: "Зарегистрироваться")
 
     // MARK: - Setup Layout
 
@@ -109,6 +92,22 @@ class LoginView: BaseView {
             $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(40)
         }
+    }
+
+    // MARK: - Setup Ui elements functions
+
+    private func setupButton(setTitle: String) -> UIButton {
+        let button = UIButton(type: .system).then {
+            $0.setTitle(setTitle, for: .normal)
+            $0.titleLabel?.font = R.font.nunitoBold(size: 18)
+            $0.setTitleColor(.black, for: .normal)
+            $0.backgroundColor = .white
+            $0.layer.cornerRadius = 12
+            $0.layer.borderColor = R.color.borderOrange()?.cgColor
+            $0.layer.borderWidth = 2
+        }
+
+        return button
     }
 
     // MARK: - Binding

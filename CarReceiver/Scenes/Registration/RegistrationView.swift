@@ -29,8 +29,11 @@ class RegistrationView: BaseView {
     }
 
     private lazy var loginTextField = CustomTextField(isNeedSecure: false, placeholderTextField: "Введите логин или email")
+
     private lazy var organizationNameTextField = CustomTextField(isNeedSecure: false, placeholderTextField: "Название организации")
+
     private lazy var passwordTextField = CustomTextField(isNeedSecure: true, placeholderTextField: "Введите пароль")
+
     private lazy var repeatThePassword = CustomTextField(isNeedSecure: true, placeholderTextField: "Повторите ввод пароля")
 
     private lazy var registerButton = UIButton(type: .system).then {

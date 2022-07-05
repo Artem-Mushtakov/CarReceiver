@@ -14,8 +14,6 @@ class AllActsViewController: BaseViewController<AllActsView> {
 
     // MARK: - Properties
 
-    var coordinator: AllActsCoordinatorFlow?
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -48,7 +46,8 @@ extension Reactive where Base: AllActsViewController {
 
     var openCreateNewActModuleBinding: Binder<Void> {
         return Binder(base) { viewController, _ in
-            viewController.coordinator?.openCustomerData()
+            let customerDataViewController = AppContainer.shared.customerDataViewController
+            viewController.navigationController?.pushViewController(customerDataViewController, animated: true)
         }
     }
 }

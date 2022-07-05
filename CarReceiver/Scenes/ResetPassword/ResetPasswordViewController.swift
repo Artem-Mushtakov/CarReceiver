@@ -14,8 +14,6 @@ class ResetPasswordViewController: BaseViewController<ResetPasswordView> {
 
     // MARK: - Properties
 
-    var coordinator: ResetPasswordCoordinatorFlow?
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {

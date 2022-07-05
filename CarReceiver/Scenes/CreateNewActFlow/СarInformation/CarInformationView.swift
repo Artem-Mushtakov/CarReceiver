@@ -23,8 +23,7 @@ class CarInformationView: BaseView {
     // MARK: - Ui elements
     
     private lazy var brandCarTextField = CustomTextLabel(text: "Для продолжения заполните обязательные поля",
-                                                         font: .boldSystemFont(ofSize: 17),
-                                                         numberOfLines: 3)
+                                                         font: R.font.nunitoBold(size: 17).unsafelyUnwrapped, numberOfLines: 3)
     
     private lazy var modelCarTextField = CustomTextField(isNeedSecure: false, placeholderTextField: "Марка - Обязательное поле", delegate: self)
     private lazy var yearCarTextField = CustomTextField(isNeedSecure: false, placeholderTextField: "Год выпуска - Обязательное поле", delegate: self)

@@ -1,26 +1,23 @@
 //
-//  CarInformationViewController.swift
+//  CustomerDataController.swift
 //  CarReceiver
 //
-//  Created by Artem Mushtakov on 03.07.2022.
+//  Created by Artem Mushtakov on 21.06.2022.
 //
 
 import Foundation
 import RxSwift
 import RxCocoa
 
-class CarInformationViewController: BaseViewController<CarInformationView> {
+class CustomerDataViewController: BaseViewController<CustomerDataView> {
 
     // MARK: - Properties
-
-    var coordinator: CarInformationCoordinatorFlow?
 
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Данные об авто"
-        navigationController?.addCustomBackButton(title: "Данные о клиенте")
+        title = "Данные о клиенте"
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,39 +34,36 @@ class CarInformationViewController: BaseViewController<CarInformationView> {
 
     override func setupBindingInput() {
 
-        contentView.brandCarPublisher
+        contentView.clientFullNamePublisher
             .subscribe { text in print(text) }
             .disposed(by: disposeBag)
 
-        contentView.modelCarPublisher
+        contentView.phoneNumberPublisher
             .subscribe { text in print(text) }
             .disposed(by: disposeBag)
 
-        contentView.yearCarPublisher
+        contentView.orderAnOutfitPublisher
             .subscribe { text in print(text) }
             .disposed(by: disposeBag)
 
-        contentView.numberCarPublisher
-            .subscribe { text in print(text) }
-            .disposed(by: disposeBag)
-
-        contentView.vinPublisher
+        contentView.reasonsAappealPublisher
             .subscribe { text in print(text) }
             .disposed(by: disposeBag)
 
         contentView.tapNextStepButtonPublisher
-            .bind(to: rx.openVisualInspectionCarBinding)
+            .bind(to: rx.openCarInformationBinding)
             .disposed(by: disposeBag)
     }
 }
 
 // MARK: - Extension Reactive
 
-extension Reactive where Base: CarInformationViewController {
-
-    var openVisualInspectionCarBinding: Binder<Void> {
+extension Reactive where Base: CustomerDataViewController {
+    
+    var openCarInformationBinding: Binder<Void> {
         return Binder(base) { viewController, _ in
-            viewController.coordinator?.openVisualInspectionCar()
+            let carInformationViewController = AppContainer.shared.carInformationViewController
+            viewController.navigationController?.pushViewController(carInformationViewController, animated: true)
         }
     }
 }

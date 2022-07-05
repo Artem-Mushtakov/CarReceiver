@@ -17,8 +17,6 @@ class VisualInspectionCarView: BaseView {
     
     // MARK: - Ui element
     
-    private lazy var scrollView = UIScrollView()
-    
     private lazy var testLabel = CustomTextLabel(text: "Test Label", font: R.font.nunitoBold(size: 17).unsafelyUnwrapped, numberOfLines: 0)
     private lazy var nextStepButton = NextStepButton(setTitle: "Далее")
     

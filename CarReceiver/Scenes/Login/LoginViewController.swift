@@ -15,8 +15,6 @@ import SnapKit
 class LoginViewController: BaseViewController<LoginView> {
 
     // MARK: - Properties
-
-    var coordinator: LoginCoordinatorFlow?
     
     // MARK: - Lifecycle
 
@@ -62,19 +60,22 @@ extension Reactive where Base: LoginViewController {
 
     var loginButtonTappedBinding: Binder<Void> {
         return Binder(base) { viewController, _ in
-            viewController.coordinator?.openMainTabBarCoordinator()
+            let mainTabBarController = AppContainer.shared.mainTabBarController
+            viewController.navigationController?.present(mainTabBarController, animated: true, completion: nil)
         }
     }
 
     var resetPasswordButtonTappedBinding: Binder<Void> {
         return Binder(base) { viewController, _ in
-            viewController.coordinator?.openResetPasswordCoordinator()
+            let resetPasswordViewController = AppContainer.shared.resetPasswordViewController
+            viewController.navigationController?.pushViewController(resetPasswordViewController, animated: true)
         }
     }
 
     var registrationButtonTappedBinding: Binder<Void> {
         return Binder(base) { viewController, _ in
-            viewController.coordinator?.openRegistrationCoordinator()
+            let registrationViewController = AppContainer.shared.registrationViewController
+            viewController.navigationController?.pushViewController(registrationViewController, animated: true)
         }
     }
 }
