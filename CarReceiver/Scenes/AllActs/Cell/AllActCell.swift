@@ -106,13 +106,13 @@ final class AllActCell: UICollectionViewCell {
         }
 
         dateOfAdmissionCar.snp.makeConstraints {
-            $0.top.equalTo(nameCar.snp.top)
+            $0.top.equalToSuperview().offset(10)
             $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(20)
         }
 
         dateOfIssue.snp.makeConstraints {
-            $0.top.equalTo(dateOfAdmissionCar.snp.bottom).offset(10)
+            $0.top.equalTo(nameCar.snp.bottom).offset(10)
             $0.leading.equalTo(dateOfAdmissionCar.snp.leading)
             $0.trailing.equalToSuperview().offset(-20)
             $0.height.equalTo(20)
@@ -126,6 +126,6 @@ final class AllActCell: UICollectionViewCell {
         self.nameCar.text = nameCar
         self.numberCar.text = numberCar
         self.dateOfAdmissionCar.text = "Приняли: \(dateOfAdmissionCar)"
-        self.dateOfIssue.text = "Выдали:  \(dateOfIssue)"
+        self.dateOfIssue.text = "Выдали:   \(dateOfIssue)"
     }
 }
