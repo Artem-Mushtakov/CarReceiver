@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class FavoriteActsViewController: BaseViewController<FavoriteActsView> {
+final class FavoriteActsViewController: BaseViewController<FavoriteActsView> {
 
     // MARK: - Properties
 

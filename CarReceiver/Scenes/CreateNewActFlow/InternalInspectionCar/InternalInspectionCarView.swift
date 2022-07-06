@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class InternalInspectionCarView: BaseView {
+final class InternalInspectionCarView: BaseView {
 
     // MARK: - Properties
 

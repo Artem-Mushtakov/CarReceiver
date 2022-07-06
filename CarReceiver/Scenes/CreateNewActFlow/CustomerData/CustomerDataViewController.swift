@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class CustomerDataViewController: BaseViewController<CustomerDataView> {
+final class CustomerDataViewController: BaseViewController<CustomerDataView> {
 
     // MARK: - Properties
 

@@ -12,7 +12,7 @@ import RxSwift
 import Then
 import SnapKit
 
-class LoginViewController: BaseViewController<LoginView> {
+final class LoginViewController: BaseViewController<LoginView> {
 
     // MARK: - Properties
     

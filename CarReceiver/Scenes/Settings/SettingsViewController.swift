@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SettingsViewController: BaseViewController<SettingsView> {
+final class SettingsViewController: BaseViewController<SettingsView> {
 
     // MARK: - Properties
 

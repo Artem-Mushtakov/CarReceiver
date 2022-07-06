@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import UIKit
 
-class AllActsViewController: BaseViewController<AllActsView> {
+final class AllActsViewController: BaseViewController<AllActsView> {
 
     // MARK: - Properties
 

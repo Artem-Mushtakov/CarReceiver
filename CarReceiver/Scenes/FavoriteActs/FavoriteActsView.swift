@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FavoriteActsView: BaseView {
+final class FavoriteActsView: BaseView {
     
     // MARK: - Properties
 

@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LoginView: BaseView {
+final class LoginView: BaseView {
 
     // MARK: - Properties
 

@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ResetPasswordView: BaseView {
+final class ResetPasswordView: BaseView {
 
     // MARK: - Properties
 

@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class RegistrationViewController: BaseViewController<RegistrationView> {
+final class RegistrationViewController: BaseViewController<RegistrationView> {
 
     // MARK: - Properties
 

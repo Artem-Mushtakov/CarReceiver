@@ -12,6 +12,10 @@
 		5C54E6AA285F5C4D003FFCEF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54E6A9285F5C4D003FFCEF /* Validator.swift */; };
 		5C54E6AD285F5DC9003FFCEF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54E6AC285F5DC9003FFCEF /* Errors.swift */; };
 		5CC59646285F547D0033CAE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC59645285F547D0033CAE5 /* GoogleService-Info.plist */; };
+		AC61E7B42874CAEC00C0F15F /* AllActCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61E7B32874CAEC00C0F15F /* AllActCell.swift */; };
+		AC61E7B72874D0E700C0F15F /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = AC61E7B62874D0E700C0F15F /* RxDataSources */; };
+		AC61E7B92874D46900C0F15F /* AllActModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61E7B82874D46900C0F15F /* AllActModel.swift */; };
+		AC61E7BB287613BF00C0F15F /* AllActsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61E7BA287613BF00C0F15F /* AllActsViewModel.swift */; };
 		AC9FBBCC285A7326006AF720 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */; };
 		AC9FBBDA285BA58C006AF720 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FBBD9285BA58C006AF720 /* CustomTextField.swift */; };
 		AC9FBBDF285BAE79006AF720 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC9FBBDD285BAE0A006AF720 /* Nunito-Bold.ttf */; };
@@ -73,6 +77,9 @@
 		5C54E6AC285F5DC9003FFCEF /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		5CC59645285F547D0033CAE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F9FB5ECD1D8248C5D1A2A55 /* Pods-CarReceiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarReceiver.debug.xcconfig"; path = "Target Support Files/Pods-CarReceiver/Pods-CarReceiver.debug.xcconfig"; sourceTree = "<group>"; };
+		AC61E7B32874CAEC00C0F15F /* AllActCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActCell.swift; sourceTree = "<group>"; };
+		AC61E7B82874D46900C0F15F /* AllActModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActModel.swift; sourceTree = "<group>"; };
+		AC61E7BA287613BF00C0F15F /* AllActsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActsViewModel.swift; sourceTree = "<group>"; };
 		AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AC9FBBD9285BA58C006AF720 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		AC9FBBDC285BAE0A006AF720 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
@@ -132,6 +139,7 @@
 				ACE95348285924920069C031 /* RxSwift in Frameworks */,
 				ACE95346285924920069C031 /* RxCocoa in Frameworks */,
 				ACE9534E285925070069C031 /* Then in Frameworks */,
+				AC61E7B72874D0E700C0F15F /* RxDataSources in Frameworks */,
 				5AC9EF35DE83FCB256C0FF8A /* Pods_CarReceiver.framework in Frameworks */,
 				ACCD771B2872166B00376095 /* Swinject in Frameworks */,
 			);
@@ -200,6 +208,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		AC61E7B22874CAD800C0F15F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AC61E7B32874CAEC00C0F15F /* AllActCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		AC9FBBCD285A7330006AF720 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +279,9 @@
 			children = (
 				ACCD763C2862579400376095 /* AllActsViewController.swift */,
 				ACCD763E286257A000376095 /* AllActsView.swift */,
+				AC61E7BA287613BF00C0F15F /* AllActsViewModel.swift */,
+				AC61E7B82874D46900C0F15F /* AllActModel.swift */,
+				AC61E7B22874CAD800C0F15F /* Cell */,
 			);
 			path = AllActs;
 			sourceTree = "<group>";
@@ -490,6 +509,7 @@
 				ACE9534D285925070069C031 /* Then */,
 				ACCD771A2872166B00376095 /* Swinject */,
 				ACCD771D287218B500376095 /* SwinjectAutoregistration */,
+				AC61E7B62874D0E700C0F15F /* RxDataSources */,
 			);
 			productName = CarReceiver;
 			productReference = ACE9532928591C210069C031 /* CarReceiver.app */;
@@ -525,6 +545,7 @@
 				ACE9534C285925070069C031 /* XCRemoteSwiftPackageReference "Then" */,
 				ACCD77192872166B00376095 /* XCRemoteSwiftPackageReference "Swinject" */,
 				ACCD771C287218B500376095 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				AC61E7B52874D0E700C0F15F /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = ACE9532A28591C210069C031 /* Products */;
 			projectDirPath = "";
@@ -621,7 +642,9 @@
 				ACCD770628719D0F00376095 /* InternalInspectionCarView.swift in Sources */,
 				ACCD764F286257F100376095 /* DetailActViewController.swift in Sources */,
 				5C54E6AA285F5C4D003FFCEF /* Validator.swift in Sources */,
+				AC61E7BB287613BF00C0F15F /* AllActsViewModel.swift in Sources */,
 				ACCD7718287215F300376095 /* AppContainer.swift in Sources */,
+				AC61E7B92874D46900C0F15F /* AllActModel.swift in Sources */,
 				ACCD767D286A3D0E00376095 /* CustomTransitionsAnimates.swift in Sources */,
 				ACCD76342862560E00376095 /* MainTabBarController.swift in Sources */,
 				ACCD76572862581300376095 /* SettingsView.swift in Sources */,
@@ -630,6 +653,7 @@
 				ACCD76EF287196DF00376095 /* CarInformationViewController.swift in Sources */,
 				ACCD765C28625F5700376095 /* ResetPasswordViewController.swift in Sources */,
 				ACE9532D28591C210069C031 /* AppDelegate.swift in Sources */,
+				AC61E7B42874CAEC00C0F15F /* AllActCell.swift in Sources */,
 				5C54E6A7285F5B44003FFCEF /* FirebaseManager.swift in Sources */,
 				ACCD763D2862579400376095 /* AllActsViewController.swift in Sources */,
 				ACCD760E285F9BC400376095 /* RegistrationViewController.swift in Sources */,
@@ -876,6 +900,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AC61E7B52874D0E700C0F15F /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.2;
+			};
+		};
 		ACCD77192872166B00376095 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -919,6 +951,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AC61E7B62874D0E700C0F15F /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC61E7B52874D0E700C0F15F /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
 		ACCD771A2872166B00376095 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ACCD77192872166B00376095 /* XCRemoteSwiftPackageReference "Swinject" */;

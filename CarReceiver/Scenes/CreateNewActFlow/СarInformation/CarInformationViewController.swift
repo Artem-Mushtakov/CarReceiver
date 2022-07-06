@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class CarInformationViewController: BaseViewController<CarInformationView> {
+final class CarInformationViewController: BaseViewController<CarInformationView> {
 
     // MARK: - Properties
 
