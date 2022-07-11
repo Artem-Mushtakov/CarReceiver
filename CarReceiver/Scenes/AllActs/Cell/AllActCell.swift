@@ -9,17 +9,6 @@ import UIKit
 
 final class AllActCell: UICollectionViewCell {
 
-    // MARK: - Initialization
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.setupView()
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     // MARK: - UI elements
 
     private lazy var contentViewAllAct = UIView().then {
@@ -60,6 +49,17 @@ final class AllActCell: UICollectionViewCell {
     private lazy var dateOfIssue = UILabel().then {
         $0.font = R.font.nunitoRegular(size: 17)
         $0.textColor = .black
+    }
+
+    // MARK: - Initialization
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setupView()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Setup view functions
