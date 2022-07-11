@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 final class VisualInspectionCarView: BaseView {
     
@@ -16,49 +17,31 @@ final class VisualInspectionCarView: BaseView {
     var tapNextStepButtonPublisher = PublishSubject<Void>()
     
     // MARK: - Ui element
-    
-    private lazy var isClearCarTitle = CustomTextLabel(text: "Автомобиль чистый?",
-                                                       font: R.font.nunitoBold(size: 17).unsafelyUnwrapped, numberOfLines: 0).then {
-        $0.textAlignment = .center
+
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+        $0.showsVerticalScrollIndicator = false
+        $0.register(VisualInspectionCarCell.self, forCellWithReuseIdentifier: "VisualInspectionCarCell")
+        $0.register(VisualInspectionCarIsClearCell.self, forCellWithReuseIdentifier: "VisualInspectionCarIsClearCell")
     }
 
-    private lazy var isClearCarCheckYes = setupIsClearCarButton(setTitle: "Да")
-    private lazy var isClearCarCheckNo = setupIsClearCarButton(setTitle: "Нет")
-    
     private lazy var nextStepButton = NextStepButton(setTitle: "Далее")
     
     // MARK: - Setup Layout
     
     override func setupHierarchy() {
-        self.addSubview(isClearCarTitle)
+        self.addSubview(collectionView)
         self.addSubview(nextStepButton)
-        self.addSubview(isClearCarCheckYes)
-        self.addSubview(isClearCarCheckNo)
     }
     
     override func setupLayout() {
-        
-        isClearCarTitle.snp.makeConstraints {
-            $0.top.equalTo(UIScreen.main.bounds.height / 5.7)
-            $0.centerX.equalToSuperview()
-            $0.leading.equalTo(20)
-            $0.trailing.equalTo(-20)
+
+        collectionView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(150)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.bottom.equalToSuperview().offset(-90)
         }
 
-        isClearCarCheckYes.snp.makeConstraints {
-            $0.top.equalTo(isClearCarTitle.snp.bottom).offset(5)
-            $0.centerX.equalTo(isClearCarTitle.snp.centerX).offset(-40)
-            $0.width.equalTo(70)
-            $0.height.equalTo(30)
-        }
-
-        isClearCarCheckNo.snp.makeConstraints {
-            $0.top.equalTo(isClearCarTitle.snp.bottom).offset(5)
-            $0.centerX.equalTo(isClearCarTitle.snp.centerX).offset(40)
-            $0.width.equalTo(70)
-            $0.height.equalTo(30)
-        }
-        
         nextStepButton.snp.makeConstraints {
             $0.bottom.equalTo(self.snp.bottom).offset(-50)
             $0.trailing.equalTo(-20)
@@ -78,13 +61,63 @@ final class VisualInspectionCarView: BaseView {
         }
         return button
     }
+
+    // Data Source Collection view
+    lazy var dataSource = RxCollectionViewSectionedReloadDataSource<SectionVisualInspectionCarModel>(
+        configureCell: { dataSource, collectionView, indexPath, item in
+
+            guard let cellVisualInspectionCar = collectionView.dequeueReusableCell(withReuseIdentifier: "VisualInspectionCarCell", for: indexPath) as? VisualInspectionCarCell else { return UICollectionViewCell() }
+            guard let  cellVisualInspectionIsClearCar = collectionView.dequeueReusableCell(withReuseIdentifier: "VisualInspectionCarIsClearCell", for: indexPath) as? VisualInspectionCarIsClearCell else { return UICollectionViewCell() }
+
+            if indexPath.row == 0 {
+                return cellVisualInspectionIsClearCar
+            } else {
+                cellVisualInspectionCar.loadDataCell(titleLabel: item.titleVisualInspection, image: item.imageVisualInspection)
+                return cellVisualInspectionCar
+            }
+        })
     
     // MARK: - Binding
     
     override func setupBindingOutput() {
 
+        collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+
+        Observable.just(TestDataVisualInspectionCar.testData)
+            .bind(to: collectionView.rx.items(dataSource: self.dataSource))
+            .disposed(by: disposeBag)
+
         nextStepButton.rx.tap
             .bind(to: tapNextStepButtonPublisher)
             .disposed(by: disposeBag)
     }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension VisualInspectionCarView: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width - 25, height: 180)
+    }
+}
+
+enum TestDataVisualInspectionCar {
+
+    static let testData = [SectionVisualInspectionCarModel(header: "", items: [
+        VisualInspectionCarModel(
+            titleVisualInspection: "1. Test",
+            imageVisualInspection: .add),
+        VisualInspectionCarModel(
+            titleVisualInspection: "1. Test",
+            imageVisualInspection: .add),
+        VisualInspectionCarModel(
+            titleVisualInspection: "1. Test",
+            imageVisualInspection: .add),
+        VisualInspectionCarModel(
+            titleVisualInspection: "1. Test",
+            imageVisualInspection: .add)])]
 }

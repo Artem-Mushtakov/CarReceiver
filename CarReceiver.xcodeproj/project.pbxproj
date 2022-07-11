@@ -12,6 +12,9 @@
 		5C54E6AA285F5C4D003FFCEF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54E6A9285F5C4D003FFCEF /* Validator.swift */; };
 		5C54E6AD285F5DC9003FFCEF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54E6AC285F5DC9003FFCEF /* Errors.swift */; };
 		5CC59646285F547D0033CAE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC59645285F547D0033CAE5 /* GoogleService-Info.plist */; };
+		AC2C7DA6287CAC7100B81627 /* VisualInspectionCarIsClearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C7DA5287CAC7100B81627 /* VisualInspectionCarIsClearCell.swift */; };
+		AC2C7DA8287CADDE00B81627 /* VisualInspectionCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C7DA7287CADDE00B81627 /* VisualInspectionCarCell.swift */; };
+		AC2C7DAA287CB06200B81627 /* VisualInspectionCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C7DA9287CB06200B81627 /* VisualInspectionCarModel.swift */; };
 		AC61E7B42874CAEC00C0F15F /* AllActCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61E7B32874CAEC00C0F15F /* AllActCell.swift */; };
 		AC61E7B72874D0E700C0F15F /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = AC61E7B62874D0E700C0F15F /* RxDataSources */; };
 		AC61E7B92874D46900C0F15F /* AllActModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61E7B82874D46900C0F15F /* AllActModel.swift */; };
@@ -78,6 +81,9 @@
 		5C54E6AC285F5DC9003FFCEF /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		5CC59645285F547D0033CAE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F9FB5ECD1D8248C5D1A2A55 /* Pods-CarReceiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarReceiver.debug.xcconfig"; path = "Target Support Files/Pods-CarReceiver/Pods-CarReceiver.debug.xcconfig"; sourceTree = "<group>"; };
+		AC2C7DA5287CAC7100B81627 /* VisualInspectionCarIsClearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualInspectionCarIsClearCell.swift; sourceTree = "<group>"; };
+		AC2C7DA7287CADDE00B81627 /* VisualInspectionCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualInspectionCarCell.swift; sourceTree = "<group>"; };
+		AC2C7DA9287CB06200B81627 /* VisualInspectionCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualInspectionCarModel.swift; sourceTree = "<group>"; };
 		AC61E7B32874CAEC00C0F15F /* AllActCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActCell.swift; sourceTree = "<group>"; };
 		AC61E7B82874D46900C0F15F /* AllActModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActModel.swift; sourceTree = "<group>"; };
 		AC61E7BA287613BF00C0F15F /* AllActsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActsViewModel.swift; sourceTree = "<group>"; };
@@ -182,6 +188,15 @@
 				2208AAF5ECA7E201C4532880 /* Pods_CarReceiver.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC2C7DA4287CAC6100B81627 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C7DA5287CAC7100B81627 /* VisualInspectionCarIsClearCell.swift */,
+				AC2C7DA7287CADDE00B81627 /* VisualInspectionCarCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		AC61E7AF2874C2AF00C0F15F /* Network */ = {
@@ -361,6 +376,8 @@
 			children = (
 				ACCD76F528719C5600376095 /* VisualInspectionCarViewController.swift */,
 				ACCD76F728719C5F00376095 /* VisualInspectionCarView.swift */,
+				AC2C7DA9287CB06200B81627 /* VisualInspectionCarModel.swift */,
+				AC2C7DA4287CAC6100B81627 /* Cell */,
 			);
 			path = VisualInspectionCar;
 			sourceTree = "<group>";
@@ -650,8 +667,10 @@
 				AC61E7B92874D46900C0F15F /* AllActModel.swift in Sources */,
 				ACCD767D286A3D0E00376095 /* CustomTransitionsAnimates.swift in Sources */,
 				ACCD76342862560E00376095 /* MainTabBarController.swift in Sources */,
+				AC2C7DAA287CB06200B81627 /* VisualInspectionCarModel.swift in Sources */,
 				ACCD76572862581300376095 /* SettingsView.swift in Sources */,
 				ACCD763F286257A000376095 /* AllActsView.swift in Sources */,
+				AC2C7DA6287CAC7100B81627 /* VisualInspectionCarIsClearCell.swift in Sources */,
 				ACE9533128591C210069C031 /* LoginViewController.swift in Sources */,
 				ACCD76EF287196DF00376095 /* CarInformationViewController.swift in Sources */,
 				ACCD765C28625F5700376095 /* ResetPasswordViewController.swift in Sources */,
@@ -670,6 +689,7 @@
 				ACCD765E28625F5D00376095 /* ResetPasswordView.swift in Sources */,
 				ACCD770428719D0A00376095 /* InternalInspectionCarViewController.swift in Sources */,
 				ACCD761B2860F05700376095 /* RegistrationView.swift in Sources */,
+				AC2C7DA8287CADDE00B81627 /* VisualInspectionCarCell.swift in Sources */,
 				ACCD76FD28719CA600376095 /* DetailVisualInspectionCarViewController.swift in Sources */,
 				ACE953602859333A0069C031 /* R.generated.swift in Sources */,
 				ACCD77132871B55300376095 /* CustomTextLabel.swift in Sources */,

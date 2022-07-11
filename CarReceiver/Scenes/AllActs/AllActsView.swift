@@ -24,16 +24,32 @@ final class AllActsView: BaseView {
         $0.layer.masksToBounds = false
     }
 
-    private lazy var allActCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.showsVerticalScrollIndicator = false
         $0.register(AllActCell.self, forCellWithReuseIdentifier: "AllActCell")
     }
 
+    // MARK: - Setup Layout
+
+    override func setupHierarchy() {
+        self.addSubview(collectionView)
+    }
+
+    override func setupLayout() {
+
+        collectionView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(150)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.bottom.equalToSuperview().offset(-90)
+        }
+    }
+
     // Data Source Collection view
-    lazy var allActDataSource = RxCollectionViewSectionedReloadDataSource<SectionAllActModel>(
+    lazy var dataSource = RxCollectionViewSectionedReloadDataSource<SectionAllActModel>(
         configureCell: { dataSource, collectionView, indexPath, item in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllActCell", for: indexPath) as? AllActCell
-            
+
             cell?.loadDataCell(numberAct: item.numberAct,
                                nameCar: item.nameCar,
                                numberCar: item.numberCar,
@@ -43,22 +59,6 @@ final class AllActsView: BaseView {
             return cell ?? UICollectionViewCell()
         })
 
-    // MARK: - Setup Layout
-
-    override func setupHierarchy() {
-        self.addSubview(allActCollectionView)
-    }
-
-    override func setupLayout() {
-
-        allActCollectionView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(150)
-            $0.leading.equalToSuperview().offset(20)
-            $0.trailing.equalToSuperview().offset(-20)
-            $0.bottom.equalToSuperview().offset(-90)
-        }
-    }
-
     // MARK: - Binding
 
     override func setupBindingOutput() {
@@ -67,11 +67,11 @@ final class AllActsView: BaseView {
             .bind(to: tapBarButtonItemPublisher)
             .disposed(by: disposeBag)
 
-        allActCollectionView.rx.setDelegate(self)
+        collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
 
         Observable.just(TestData.testData)
-            .bind(to: allActCollectionView.rx.items(dataSource: self.allActDataSource))
+            .bind(to: collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: disposeBag)
     }
 }
