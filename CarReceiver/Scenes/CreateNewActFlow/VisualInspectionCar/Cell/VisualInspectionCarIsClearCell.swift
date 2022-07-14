@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class VisualInspectionCarIsClearCell: UICollectionViewCell {
+
+    // MARK: - Properties
+
+    var clearCarYesButton = PublishSubject<Void>()
+    var clearCarNoButton = PublishSubject<Void>()
 
     // MARK: - Ui element
 
@@ -37,6 +44,7 @@ final class VisualInspectionCarIsClearCell: UICollectionViewCell {
     private func setupView() {
         setupHierarchy()
         setupLayout()
+        setupBinding()
     }
 
     // MARK: - Setup Layout
@@ -76,10 +84,22 @@ final class VisualInspectionCarIsClearCell: UICollectionViewCell {
     private func setupIsClearCarButton(setTitle: String) -> UIButton {
         let button = UIButton(type: .system).then {
             $0.setTitle(setTitle, for: .normal)
+            $0.isUserInteractionEnabled = true
             $0.tintColor = .black
             $0.layer.cornerRadius = 10
             $0.backgroundColor = .lightGray
         }
         return button
+    }
+
+    private func setupBinding() {
+
+        isClearCarCheckYesButton.rx.tap
+            .bind(to: clearCarYesButton)
+            .disposed(by: DisposeBag())
+
+        isClearCarCheckNoButton.rx.tap
+            .bind(to: clearCarNoButton)
+            .disposed(by: DisposeBag())
     }
 }

@@ -9,9 +9,11 @@ import UIKit
 import RxDataSources
 
 struct VisualInspectionCarModel {
-    var titleVisualInspection: String
-    var imageVisualInspection: UIImage
+    var isClearCarTitle: String?
+    var titleVisualInspection: String?
+    var imageVisualInspection: UIImage?
 }
+
 
 struct SectionVisualInspectionCarModel {
   var header: String
@@ -25,4 +27,26 @@ extension SectionVisualInspectionCarModel: SectionModelType {
     self = original
     self.items = items
   }
+}
+
+enum TestDataVisualInspectionCar {
+
+    static let testData = [SectionVisualInspectionCarModel(header: "", items: [
+        VisualInspectionCarModel(
+            isClearCarTitle: "Автомобиль чистый?"),
+        VisualInspectionCarModel(
+            titleVisualInspection: "1. Вид спереди",
+            imageVisualInspection: .add),
+        VisualInspectionCarModel(
+            titleVisualInspection: "2. Вид справа",
+            imageVisualInspection: .add),
+        VisualInspectionCarModel(
+            titleVisualInspection: "3. Вид сзади",
+            imageVisualInspection: .add),
+        VisualInspectionCarModel(
+            titleVisualInspection: "4. Вид слева",
+            imageVisualInspection: .add),
+        VisualInspectionCarModel(
+            titleVisualInspection: "5. Вид сверху",
+            imageVisualInspection: .add)])]
 }

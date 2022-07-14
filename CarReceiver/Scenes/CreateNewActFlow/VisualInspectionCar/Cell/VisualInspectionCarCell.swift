@@ -11,8 +11,11 @@ final class VisualInspectionCarCell: UICollectionViewCell {
 
     // MARK: - Ui element
 
-    private lazy var titleCarLabel = CustomTextLabel(text: "Тест", font: R.font.nunitoSemiBold(size: 14).unsafelyUnwrapped, numberOfLines: 0)
-    private lazy var carImageView = UIImageView().then {
+    private lazy var titleCarLabel = CustomTextLabel(text: "Тест", font: R.font.nunitoBold(size: 17).unsafelyUnwrapped, numberOfLines: 0).then {
+        $0.textAlignment = .center
+    }
+
+    private lazy var carImageView = setupUiImageViewShadow(imageView: UIImageView()).then {
         $0.backgroundColor = .gray
     }
 
@@ -46,13 +49,13 @@ final class VisualInspectionCarCell: UICollectionViewCell {
         titleCarLabel.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.centerX.equalToSuperview()
-            $0.width.height.equalTo(40)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
 
         carImageView.snp.makeConstraints {
             $0.top.equalTo(titleCarLabel.snp.bottom).offset(20)
             $0.centerX.equalToSuperview()
-            $0.width.height.equalTo(100)
+            $0.width.height.equalTo(UIScreen.main.bounds.width - 40)
         }
     }
 
@@ -68,10 +71,21 @@ final class VisualInspectionCarCell: UICollectionViewCell {
         return button
     }
 
+    private func setupUiImageViewShadow(imageView: UIImageView) -> UIImageView {
+        imageView.layer.backgroundColor = UIColor.white.cgColor
+        imageView.layer.cornerRadius = 10
+        imageView.layer.shadowRadius = 4.0
+        imageView.layer.shadowColor = UIColor.black.cgColor
+        imageView.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        imageView.layer.shadowOpacity = 0.2
+        imageView.layer.masksToBounds = false
+        return imageView
+    }
+
     // MARK: - Load data cell
 
-    func loadDataCell(titleLabel: String, image: UIImage?) {
-        guard let image = image else { return }
+    func loadDataCell(titleLabel: String?, image: UIImage?) {
+        guard let image = image, let titleLabel = titleLabel  else { return }
         self.titleCarLabel.text = titleLabel
         self.carImageView.image = image
     }

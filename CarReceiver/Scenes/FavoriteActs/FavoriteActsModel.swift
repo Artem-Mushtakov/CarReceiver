@@ -17,15 +17,77 @@ struct FavoriteActsModel {
 }
 
 struct SectionFavoriteActsModel {
-  var header: String
-  var items: [Item]
+    var header: String
+    var items: [Item]
 }
 
 extension SectionFavoriteActsModel: SectionModelType {
-  typealias Item = FavoriteActsModel
+    typealias Item = FavoriteActsModel
 
-   init(original: SectionFavoriteActsModel, items: [Item]) {
-    self = original
-    self.items = items
-  }
+    init(original: SectionFavoriteActsModel, items: [Item]) {
+        self = original
+        self.items = items
+    }
+}
+
+
+enum TestDataFavorite {
+
+    static let TestDataFavorite = [SectionFavoriteActsModel(header: "",
+                                                            items: [
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022"),
+                                                                FavoriteActsModel(numberAct: "5000",
+                                                                                  nameCar: "Subaru Impreza WRX",
+                                                                                  numberCar: "A777AA777",
+                                                                                  dateOfAdmissionCar: "22.02.2022",
+                                                                                  dateOfIssue: "23.03.2022")])]
 }

@@ -69,7 +69,7 @@ final class VisualInspectionCarView: BaseView {
             guard let cellVisualInspectionCar = collectionView.dequeueReusableCell(withReuseIdentifier: "VisualInspectionCarCell", for: indexPath) as? VisualInspectionCarCell else { return UICollectionViewCell() }
             guard let  cellVisualInspectionIsClearCar = collectionView.dequeueReusableCell(withReuseIdentifier: "VisualInspectionCarIsClearCell", for: indexPath) as? VisualInspectionCarIsClearCell else { return UICollectionViewCell() }
 
-            if indexPath.row == 0 {
+            if item.isClearCarTitle != nil {
                 return cellVisualInspectionIsClearCar
             } else {
                 cellVisualInspectionCar.loadDataCell(titleLabel: item.titleVisualInspection, image: item.imageVisualInspection)
@@ -101,23 +101,11 @@ extension VisualInspectionCarView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width - 25, height: 180)
+
+        if indexPath.row > 0 {
+            return CGSize(width: UIScreen.main.bounds.width - 25, height: UIScreen.main.bounds.width + 20)
+        } else {
+            return CGSize(width: UIScreen.main.bounds.width - 25, height: 80)
+        }
     }
-}
-
-enum TestDataVisualInspectionCar {
-
-    static let testData = [SectionVisualInspectionCarModel(header: "", items: [
-        VisualInspectionCarModel(
-            titleVisualInspection: "1. Test",
-            imageVisualInspection: .add),
-        VisualInspectionCarModel(
-            titleVisualInspection: "1. Test",
-            imageVisualInspection: .add),
-        VisualInspectionCarModel(
-            titleVisualInspection: "1. Test",
-            imageVisualInspection: .add),
-        VisualInspectionCarModel(
-            titleVisualInspection: "1. Test",
-            imageVisualInspection: .add)])]
 }
