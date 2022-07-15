@@ -11,11 +11,6 @@ import RxCocoa
 
 final class VisualInspectionCarIsClearCell: UICollectionViewCell {
 
-    // MARK: - Properties
-
-    var clearCarYesButton = PublishSubject<Void>()
-    var clearCarNoButton = PublishSubject<Void>()
-
     // MARK: - Ui element
 
     private lazy var isClearCarTitle = CustomTextLabel(text: "Автомобиль чистый?",
@@ -23,8 +18,8 @@ final class VisualInspectionCarIsClearCell: UICollectionViewCell {
         $0.textAlignment = .center
     }
 
-    private lazy var isClearCarCheckYesButton = setupIsClearCarButton(setTitle: "Да")
-    private lazy var isClearCarCheckNoButton = setupIsClearCarButton(setTitle: "Нет")
+    lazy var isClearCarCheckYesButton = setupIsClearCarButton(setTitle: "Да")
+    lazy var isClearCarCheckNoButton = setupIsClearCarButton(setTitle: "Нет")
 
     private lazy var nextStepButton = NextStepButton(setTitle: "Далее")
 
@@ -44,7 +39,6 @@ final class VisualInspectionCarIsClearCell: UICollectionViewCell {
     private func setupView() {
         setupHierarchy()
         setupLayout()
-        setupBinding()
     }
 
     // MARK: - Setup Layout
@@ -88,18 +82,24 @@ final class VisualInspectionCarIsClearCell: UICollectionViewCell {
             $0.tintColor = .black
             $0.layer.cornerRadius = 10
             $0.backgroundColor = .lightGray
+            $0.addTarget(self, action: #selector(selectedColorButton), for: .touchUpInside)
         }
         return button
     }
 
-    private func setupBinding() {
+    @objc private func selectedColorButton(sender: UIButton) {
+        isClearCarCheckYesButton.tag = 0
+        isClearCarCheckNoButton.tag = 1
 
-        isClearCarCheckYesButton.rx.tap
-            .bind(to: clearCarYesButton)
-            .disposed(by: DisposeBag())
-
-        isClearCarCheckNoButton.rx.tap
-            .bind(to: clearCarNoButton)
-            .disposed(by: DisposeBag())
+        switch sender.tag {
+        case 0:
+            isClearCarCheckYesButton.backgroundColor = R.color.orangeColor()
+            isClearCarCheckNoButton.backgroundColor = .lightGray
+        case 1:
+            isClearCarCheckNoButton.backgroundColor = R.color.orangeColor()
+            isClearCarCheckYesButton.backgroundColor = .lightGray
+        default:
+            fatalError("Button tap error")
+        }
     }
 }

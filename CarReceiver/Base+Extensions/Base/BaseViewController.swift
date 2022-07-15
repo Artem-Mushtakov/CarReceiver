@@ -63,6 +63,11 @@ class BaseViewController<View>: UIViewController where View: UIView {
         navigationController?.navigationBar.standardAppearance = apperiance
         navigationController?.navigationBar.scrollEdgeAppearance = apperiance
         navigationController?.navigationBar.prefersLargeTitles = true
+
+        // FIXME: - пофиксить костыль
+        let fakeViewAndOnlyLargeTitle = UIView()
+        view.addSubview(fakeViewAndOnlyLargeTitle)
+        view.sendSubviewToBack(fakeViewAndOnlyLargeTitle)
     }
 
     // MARK: - Ui elements
