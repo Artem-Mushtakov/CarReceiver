@@ -22,7 +22,13 @@ final class FavoriteActsViewController: BaseViewController<FavoriteActsView> {
 
     // MARK: - Binding
 
-    override func setupBindingInput() { }
+    override func setupBindingInput() {
+
+        Observable.just(TestDataFavorite.testDataFavorite)
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: contentView.favoriteDataPublisher)
+            .disposed(by: disposeBag)
+    }
 }
 
 // MARK: - Extension Reactive

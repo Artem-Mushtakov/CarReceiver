@@ -46,6 +46,11 @@ final class VisualInspectionCarViewController: BaseViewController<VisualInspecti
         contentView.clearCarNoButtonPublisher
             .subscribe({_ in print("Tap clearCarNoButtonPublisher") })
             .disposed(by: disposeBag)
+
+        Observable.just(TestDataVisualInspectionCar.testData)
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: contentView.visualDataPublisher)
+            .disposed(by: disposeBag)
     }
 }
 

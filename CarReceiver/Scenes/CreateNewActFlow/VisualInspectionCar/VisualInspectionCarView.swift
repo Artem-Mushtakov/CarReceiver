@@ -18,6 +18,8 @@ final class VisualInspectionCarView: BaseView {
 
     var clearCarYesButtonPublisher = PublishSubject<Void>()
     var clearCarNoButtonPublisher = PublishSubject<Void>()
+
+    var visualDataPublisher = PublishSubject<[SectionVisualInspectionCarModel]>()
     
     // MARK: - Ui element
 
@@ -41,8 +43,8 @@ final class VisualInspectionCarView: BaseView {
 
         collectionView.snp.makeConstraints {
             $0.top.equalToSuperview()
-            $0.leading.equalToSuperview().offset(20)
-            $0.trailing.equalToSuperview().offset(-20)
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
             $0.bottom.equalToSuperview()
         }
 
@@ -110,7 +112,7 @@ final class VisualInspectionCarView: BaseView {
         collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
 
-        Observable.just(TestDataVisualInspectionCar.testData)
+        visualDataPublisher
             .bind(to: collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: disposeBag)
 

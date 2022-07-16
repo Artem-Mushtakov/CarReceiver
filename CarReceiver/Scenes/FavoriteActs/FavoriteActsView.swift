@@ -14,9 +14,11 @@ final class FavoriteActsView: BaseView {
     
     // MARK: - Properties
 
+    var favoriteDataPublisher = PublishSubject<[SectionFavoriteActsModel]>()
+
     // MARK: - Ui elements
 
-    private lazy var favoriteActCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.showsVerticalScrollIndicator = false
         $0.register(AllActCell.self, forCellWithReuseIdentifier: "AllActCell")
     }
@@ -45,12 +47,12 @@ final class FavoriteActsView: BaseView {
     // MARK: - Setup Layout
 
     override func setupHierarchy() {
-        self.addSubview(favoriteActCollectionView)
+        self.addSubview(collectionView)
     }
 
     override func setupLayout() {
 
-        favoriteActCollectionView.snp.makeConstraints {
+        collectionView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
@@ -62,11 +64,12 @@ final class FavoriteActsView: BaseView {
 
     override func setupBindingOutput() {
 
-        favoriteActCollectionView.rx.setDelegate(self)
+        collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
 
-        Observable.just(TestDataFavorite.TestDataFavorite)
-            .bind(to: favoriteActCollectionView.rx.items(dataSource: self.dataSource))
+        favoriteDataPublisher
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: disposeBag)
     }
 }

@@ -30,7 +30,6 @@ extension SectionAllActModel: SectionModelType {
   }
 }
 
-
 enum TestData {
 
     static let testData = [SectionAllActModel(header: "",

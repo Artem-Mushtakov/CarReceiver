@@ -37,6 +37,11 @@ final class AllActsViewController: BaseViewController<AllActsView> {
         contentView.tapBarButtonItemPublisher
             .bind(to: rx.openCreateNewActModuleBinding)
             .disposed(by: disposeBag)
+
+        Observable.just(TestData.testData)
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: contentView.allActDataPublisher)
+            .disposed(by: disposeBag)
     }
 }
 

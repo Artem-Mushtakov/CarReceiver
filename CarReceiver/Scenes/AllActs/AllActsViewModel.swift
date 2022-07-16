@@ -5,4 +5,13 @@
 //  Created by Artem Mushtakov on 06.07.2022.
 //
 
-import Foundation
+import RxSwift
+import UIKit
+
+protocol AllActsViewModelFlow {
+
+}
+
+class AllActsViewModel {
+
+}

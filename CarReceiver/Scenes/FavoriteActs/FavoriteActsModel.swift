@@ -33,7 +33,7 @@ extension SectionFavoriteActsModel: SectionModelType {
 
 enum TestDataFavorite {
 
-    static let TestDataFavorite = [SectionFavoriteActsModel(header: "",
+    static let testDataFavorite = [SectionFavoriteActsModel(header: "",
                                                             items: [
                                                                 FavoriteActsModel(numberAct: "5000",
                                                                                   nameCar: "Subaru Impreza WRX",
