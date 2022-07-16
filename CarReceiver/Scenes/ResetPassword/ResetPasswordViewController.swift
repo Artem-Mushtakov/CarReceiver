@@ -23,7 +23,16 @@ final class ResetPasswordViewController: BaseViewController<ResetPasswordView> {
 
     // MARK: - Binding
 
-    override func setupBindingInput() { }
+    override func setupBindingInput() {
+
+        contentView.sendTextEmailPublisher
+            .subscribe(onNext: { print("Reset email: \($0)") })
+            .disposed(by: disposeBag)
+
+        contentView.tapResetPasswordPublisher
+            .subscribe(onNext: { print("Selact button reset password") })
+            .disposed(by: disposeBag)
+    }
 }
 
 // MARK: - Extension Reactive
