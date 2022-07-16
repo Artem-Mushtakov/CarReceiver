@@ -20,6 +20,7 @@
 		AC61E7B92874D46900C0F15F /* AllActModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61E7B82874D46900C0F15F /* AllActModel.swift */; };
 		AC61E7BB287613BF00C0F15F /* AllActsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61E7BA287613BF00C0F15F /* AllActsViewModel.swift */; };
 		AC61E7BE28761F9700C0F15F /* FavoriteActsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61E7BD28761F9700C0F15F /* FavoriteActsModel.swift */; };
+		AC7F4C7B2882A2F7001EDC70 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4C7A2882A2F7001EDC70 /* BaseCollectionViewCell.swift */; };
 		AC9FBBCC285A7326006AF720 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */; };
 		AC9FBBDA285BA58C006AF720 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FBBD9285BA58C006AF720 /* CustomTextField.swift */; };
 		AC9FBBDF285BAE79006AF720 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC9FBBDD285BAE0A006AF720 /* Nunito-Bold.ttf */; };
@@ -88,6 +89,7 @@
 		AC61E7B82874D46900C0F15F /* AllActModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActModel.swift; sourceTree = "<group>"; };
 		AC61E7BA287613BF00C0F15F /* AllActsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActsViewModel.swift; sourceTree = "<group>"; };
 		AC61E7BD28761F9700C0F15F /* FavoriteActsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteActsModel.swift; sourceTree = "<group>"; };
+		AC7F4C7A2882A2F7001EDC70 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC9FBBCB285A7326006AF720 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AC9FBBD9285BA58C006AF720 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		AC9FBBDC285BAE0A006AF720 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				ACCD76142860E3D400376095 /* BaseViewController.swift */,
 				ACCD76182860EBC300376095 /* BaseView.swift */,
+				AC7F4C7A2882A2F7001EDC70 /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				ACCD76F828719C5F00376095 /* VisualInspectionCarView.swift in Sources */,
 				ACCD7716287210DC00376095 /* UINavigationController+Extension.swift in Sources */,
 				5C54E6AD285F5DC9003FFCEF /* Errors.swift in Sources */,
+				AC7F4C7B2882A2F7001EDC70 /* BaseCollectionViewCell.swift in Sources */,
 				ACCD7651286257F600376095 /* DetailActView.swift in Sources */,
 				ACCD770D28719D4B00376095 /* FinishNewActView.swift in Sources */,
 				ACCD761E2860F76F00376095 /* LoginView.swift in Sources */,

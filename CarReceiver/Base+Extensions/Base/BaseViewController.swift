@@ -62,6 +62,7 @@ class BaseViewController<View>: UIViewController where View: UIView {
         apperiance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.standardAppearance = apperiance
         navigationController?.navigationBar.scrollEdgeAppearance = apperiance
+        navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.prefersLargeTitles = true
 
         // FIXME: - пофиксить костыль

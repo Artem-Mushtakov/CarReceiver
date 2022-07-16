@@ -9,7 +9,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class VisualInspectionCarIsClearCell: UICollectionViewCell {
+final class VisualInspectionCarIsClearCell: BaseCollectionViewCell {
+
+    // MARK: Properties
+
+    var clearCarYesButtonPublisher = PublishSubject<Void>()
+    var clearCarNoButtonPublisher = PublishSubject<Void>()
 
     // MARK: - Ui element
 
@@ -18,8 +23,8 @@ final class VisualInspectionCarIsClearCell: UICollectionViewCell {
         $0.textAlignment = .center
     }
 
-    lazy var isClearCarCheckYesButton = setupIsClearCarButton(setTitle: "Да")
-    lazy var isClearCarCheckNoButton = setupIsClearCarButton(setTitle: "Нет")
+    private lazy var isClearCarCheckYesButton = setupIsClearCarButton(setTitle: "Да")
+    private lazy var isClearCarCheckNoButton = setupIsClearCarButton(setTitle: "Нет")
 
     private lazy var nextStepButton = NextStepButton(setTitle: "Далее")
 
@@ -95,11 +100,36 @@ final class VisualInspectionCarIsClearCell: UICollectionViewCell {
         case 0:
             isClearCarCheckYesButton.backgroundColor = R.color.orangeColor()
             isClearCarCheckNoButton.backgroundColor = .lightGray
+            isClearCarCheckYesButton.isUserInteractionEnabled = false
+            isClearCarCheckNoButton.isUserInteractionEnabled = true
         case 1:
             isClearCarCheckNoButton.backgroundColor = R.color.orangeColor()
             isClearCarCheckYesButton.backgroundColor = .lightGray
+            isClearCarCheckNoButton.isUserInteractionEnabled = false
+            isClearCarCheckYesButton.isUserInteractionEnabled = true
         default:
             fatalError("Button tap error")
         }
+    }
+
+    // MARK: - Load data cell
+
+    func loadDataCell(titleLabel: String?) {
+        guard let titleLabel = titleLabel  else { return }
+        self.isClearCarTitle.text = titleLabel
+        binding()
+    }
+
+    // MARK: - Reactiva bind
+
+    private func binding() {
+
+        isClearCarCheckYesButton.rx.controlEvent(.touchUpInside)
+            .bind(to: clearCarYesButtonPublisher)
+            .disposed(by: disposeBag)
+
+        isClearCarCheckNoButton.rx.controlEvent(.touchUpInside)
+            .bind(to: clearCarNoButtonPublisher)
+            .disposed(by: disposeBag)
     }
 }

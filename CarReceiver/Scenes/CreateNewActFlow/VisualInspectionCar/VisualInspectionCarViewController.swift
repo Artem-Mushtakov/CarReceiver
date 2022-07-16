@@ -38,6 +38,14 @@ final class VisualInspectionCarViewController: BaseViewController<VisualInspecti
         contentView.tapNextStepButtonPublisher
             .bind(to: rx.openDetailVisualInspectionCarBinding)
             .disposed(by: disposeBag)
+
+        contentView.clearCarYesButtonPublisher
+            .subscribe({_ in print("Tap clearCarYesButtonPublisher") })
+            .disposed(by: disposeBag)
+
+        contentView.clearCarNoButtonPublisher
+            .subscribe({_ in print("Tap clearCarNoButtonPublisher") })
+            .disposed(by: disposeBag)
     }
 }
 

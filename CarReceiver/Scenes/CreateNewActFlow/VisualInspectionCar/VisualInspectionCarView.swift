@@ -15,10 +15,14 @@ final class VisualInspectionCarView: BaseView {
     // MARK: - Properties
     
     var tapNextStepButtonPublisher = PublishSubject<Void>()
+
+    var clearCarYesButtonPublisher = PublishSubject<Void>()
+    var clearCarNoButtonPublisher = PublishSubject<Void>()
     
     // MARK: - Ui element
 
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+        $0.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
         $0.showsVerticalScrollIndicator = false
         $0.register(VisualInspectionCarCell.self, forCellWithReuseIdentifier: "VisualInspectionCarCell")
         $0.register(VisualInspectionCarIsClearCell.self, forCellWithReuseIdentifier: "VisualInspectionCarIsClearCell")
@@ -36,10 +40,10 @@ final class VisualInspectionCarView: BaseView {
     override func setupLayout() {
 
         collectionView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(150)
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
-            $0.bottom.equalToSuperview().offset(-90)
+            $0.bottom.equalToSuperview()
         }
 
         nextStepButton.snp.makeConstraints {
@@ -62,20 +66,42 @@ final class VisualInspectionCarView: BaseView {
         return button
     }
 
-    // Data Source Collection view
-    lazy var dataSource = RxCollectionViewSectionedReloadDataSource<SectionVisualInspectionCarModel>(
-        configureCell: { dataSource, collectionView, indexPath, item in
+    // MARK: - Data Source
 
-            guard let cellVisualInspectionCar = collectionView.dequeueReusableCell(withReuseIdentifier: "VisualInspectionCarCell", for: indexPath) as? VisualInspectionCarCell else { return UICollectionViewCell() }
-            guard let  cellVisualInspectionIsClearCar = collectionView.dequeueReusableCell(withReuseIdentifier: "VisualInspectionCarIsClearCell", for: indexPath) as? VisualInspectionCarIsClearCell else { return UICollectionViewCell() }
+    typealias DataSource = RxCollectionViewSectionedReloadDataSource
+
+    lazy var dataSource: DataSource<SectionVisualInspectionCarModel> = { createDataSource() } ()
+
+    func createDataSource() -> DataSource<SectionVisualInspectionCarModel> {
+        .init(configureCell: { [unowned self] _, collectionView, indexPath, item in
+
+            guard let cellVisualInspectionCar = collectionView.dequeueReusableCell(
+                withReuseIdentifier: "VisualInspectionCarCell",
+                for: indexPath) as? VisualInspectionCarCell else { return UICollectionViewCell() }
+
+            guard let cellVisualInspectionIsClearCar = collectionView.dequeueReusableCell(
+                withReuseIdentifier: "VisualInspectionCarIsClearCell",
+                for: indexPath) as? VisualInspectionCarIsClearCell else { return UICollectionViewCell() }
 
             if item.isClearCarTitle != nil {
-                return cellVisualInspectionIsClearCar
+                return cellVisualInspectionIsClearCar.then {
+                    $0.loadDataCell(titleLabel: item.isClearCarTitle)
+
+                    $0.clearCarYesButtonPublisher
+                        .bind(to: self.clearCarYesButtonPublisher)
+                        .disposed(by: disposeBag)
+
+                    $0.clearCarNoButtonPublisher
+                        .bind(to: self.clearCarNoButtonPublisher)
+                        .disposed(by: disposeBag)
+                }
             } else {
-                cellVisualInspectionCar.loadDataCell(titleLabel: item.titleVisualInspection, image: item.imageVisualInspection)
-                return cellVisualInspectionCar
+                return cellVisualInspectionCar.then {
+                    $0.loadDataCell(titleLabel: item.titleVisualInspection, image: item.imageVisualInspection)
+                }
             }
         })
+    }
     
     // MARK: - Binding
     

@@ -21,9 +21,15 @@ final class FavoriteActsView: BaseView {
         $0.register(AllActCell.self, forCellWithReuseIdentifier: "AllActCell")
     }
 
-    // Data Source Collection view
-    lazy var favoriteActDataSource = RxCollectionViewSectionedReloadDataSource<SectionFavoriteActsModel>(
-        configureCell: { dataSource, collectionView, indexPath, item in
+    // MARK: - Data Source
+
+    typealias DataSource = RxCollectionViewSectionedReloadDataSource
+
+    lazy var dataSource: DataSource<SectionFavoriteActsModel> = { createDataSource() } ()
+
+    func createDataSource() -> DataSource<SectionFavoriteActsModel> {
+        .init(configureCell: { _, collectionView, indexPath, item in
+
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllActCell", for: indexPath) as? AllActCell
 
             cell?.loadDataCell(numberAct: item.numberAct,
@@ -34,6 +40,7 @@ final class FavoriteActsView: BaseView {
 
             return cell ?? UICollectionViewCell()
         })
+    }
 
     // MARK: - Setup Layout
 
@@ -44,7 +51,7 @@ final class FavoriteActsView: BaseView {
     override func setupLayout() {
 
         favoriteActCollectionView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(150)
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.bottom.equalToSuperview().offset(-90)
@@ -59,7 +66,7 @@ final class FavoriteActsView: BaseView {
             .disposed(by: disposeBag)
 
         Observable.just(TestDataFavorite.TestDataFavorite)
-            .bind(to: favoriteActCollectionView.rx.items(dataSource: self.favoriteActDataSource))
+            .bind(to: favoriteActCollectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: disposeBag)
     }
 }

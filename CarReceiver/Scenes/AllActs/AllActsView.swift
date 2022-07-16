@@ -38,16 +38,22 @@ final class AllActsView: BaseView {
     override func setupLayout() {
 
         collectionView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(150)
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.bottom.equalToSuperview().offset(-90)
         }
     }
 
-    // Data Source Collection view
-    lazy var dataSource = RxCollectionViewSectionedReloadDataSource<SectionAllActModel>(
-        configureCell: { dataSource, collectionView, indexPath, item in
+    // MARK: - Data Source
+
+    typealias DataSource = RxCollectionViewSectionedReloadDataSource
+
+    lazy var dataSource: DataSource<SectionAllActModel> = { createDataSource() } ()
+
+    func createDataSource() -> DataSource<SectionAllActModel> {
+        .init(configureCell: { _, collectionView, indexPath, item in
+
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllActCell", for: indexPath) as? AllActCell
 
             cell?.loadDataCell(numberAct: item.numberAct,
@@ -58,6 +64,7 @@ final class AllActsView: BaseView {
 
             return cell ?? UICollectionViewCell()
         })
+    }
 
     // MARK: - Binding
 

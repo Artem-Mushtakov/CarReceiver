@@ -14,7 +14,6 @@ struct VisualInspectionCarModel {
     var imageVisualInspection: UIImage?
 }
 
-
 struct SectionVisualInspectionCarModel {
   var header: String
   var items: [Item]

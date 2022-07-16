@@ -27,7 +27,7 @@ final class CustomerDataView: BaseView {
     private lazy var clientFullName = CustomTextField(isNeedSecure: false, placeholderTextField: "ФИО - Обязательное поле", delegate: self)
     private lazy var phoneNumber = CustomTextField(isNeedSecure: false, placeholderTextField: "Номер телефона - Обязательное поле", delegate: self)
     private lazy var orderAnOutfit = CustomTextField(isNeedSecure: false, placeholderTextField: "№ - Заказ наряда - Обязательное поле", delegate: self)
-    private lazy var reasonsAappeal = createTextView(text: "test")
+    private lazy var reasonsAappeal = createTextView(text: "")
     private lazy var nextStepButton = NextStepButton(setTitle: "Далее")
 
     // MARK: - Setup Layout
@@ -74,7 +74,7 @@ final class CustomerDataView: BaseView {
             $0.top.equalTo(orderAnOutfit.snp.bottom).offset(20)
             $0.leading.equalTo(20)
             $0.trailing.equalTo(-20)
-            $0.height.equalTo(300)
+            $0.bottom.equalTo(nextStepButton.snp.top).offset(-20)
         }
 
         nextStepButton.snp.makeConstraints {
