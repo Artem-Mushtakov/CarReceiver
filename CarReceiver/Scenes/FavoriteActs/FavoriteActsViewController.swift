@@ -18,6 +18,7 @@ final class FavoriteActsViewController: BaseViewController<FavoriteActsView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Избранные"
+        navigationController?.navigationBar.tintColor = .white
     }
 
     // MARK: - Binding
@@ -28,9 +29,22 @@ final class FavoriteActsViewController: BaseViewController<FavoriteActsView> {
             .observe(on: MainScheduler.asyncInstance)
             .bind(to: contentView.favoriteDataPublisher)
             .disposed(by: disposeBag)
+
+        contentView.tapItemCollectionView
+            .bind(to: rx.openDetailModuleBinding)
+            .disposed(by: disposeBag)
     }
 }
 
 // MARK: - Extension Reactive
 
-extension Reactive where Base: FavoriteActsViewController { }
+extension Reactive where Base: FavoriteActsViewController {
+    
+    var openDetailModuleBinding: Binder<IndexPath> {
+        return Binder(base) { viewController, indexPath in
+            let detailAct = AppContainer.shared.detailActViewController
+            viewController.navigationController?.pushViewController(detailAct, animated: true)
+            print("Selected item indexPath \(indexPath.row)")
+        }
+    }
+}

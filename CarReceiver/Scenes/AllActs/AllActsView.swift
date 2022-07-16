@@ -17,6 +17,7 @@ final class AllActsView: BaseView {
     var tapBarButtonItemPublisher = PublishSubject<Void>()
     var tapCellPublisher = PublishSubject<Void>()
     var allActDataPublisher = PublishSubject<[SectionAllActModel]>()
+    var tapItemCollectionView = PublishSubject<IndexPath>()
     
     // MARK: - Ui elements
 
@@ -77,6 +78,10 @@ final class AllActsView: BaseView {
             .disposed(by: disposeBag)
 
         collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+
+        collectionView.rx.itemSelected
+            .bind(to: tapItemCollectionView)
             .disposed(by: disposeBag)
 
         allActDataPublisher

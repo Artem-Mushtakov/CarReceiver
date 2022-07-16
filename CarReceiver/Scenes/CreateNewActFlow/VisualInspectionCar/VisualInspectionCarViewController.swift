@@ -39,6 +39,10 @@ final class VisualInspectionCarViewController: BaseViewController<VisualInspecti
             .bind(to: rx.openDetailVisualInspectionCarBinding)
             .disposed(by: disposeBag)
 
+        contentView.tapItemCollectionView
+            .bind(to: rx.openDetailVisualModuleBinding)
+            .disposed(by: disposeBag)
+
         contentView.clearCarYesButtonPublisher
             .subscribe({_ in print("Tap clearCarYesButtonPublisher") })
             .disposed(by: disposeBag)
@@ -62,6 +66,13 @@ extension Reactive where Base: VisualInspectionCarViewController {
         return Binder(base) { viewController, _ in
             let detailVisualInspectionCarViewController = AppContainer.shared.detailVisualInspectionCarViewController
             viewController.navigationController?.pushViewController(detailVisualInspectionCarViewController, animated: true)
+        }
+    }
+
+    var openDetailVisualModuleBinding: Binder<IndexPath> {
+        return Binder(base) { viewController, indexPath in
+            let detailVisualViewController = AppContainer.shared.detailVisualInspectionCarViewController
+            viewController.navigationController?.pushViewController(detailVisualViewController, animated: true)
         }
     }
 }

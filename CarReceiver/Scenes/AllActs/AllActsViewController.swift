@@ -42,6 +42,10 @@ final class AllActsViewController: BaseViewController<AllActsView> {
             .observe(on: MainScheduler.asyncInstance)
             .bind(to: contentView.allActDataPublisher)
             .disposed(by: disposeBag)
+
+        contentView.tapItemCollectionView
+            .bind(to: rx.openDetailModuleBinding)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -53,6 +57,14 @@ extension Reactive where Base: AllActsViewController {
         return Binder(base) { viewController, _ in
             let customerDataViewController = AppContainer.shared.customerDataViewController
             viewController.navigationController?.pushViewController(customerDataViewController, animated: true)
+        }
+    }
+
+    var openDetailModuleBinding: Binder<IndexPath> {
+        return Binder(base) { viewController, indexPath in
+            let detailAct = AppContainer.shared.detailActViewController
+            viewController.navigationController?.pushViewController(detailAct, animated: true)
+            print("Selected item indexPath \(indexPath.row)")
         }
     }
 }

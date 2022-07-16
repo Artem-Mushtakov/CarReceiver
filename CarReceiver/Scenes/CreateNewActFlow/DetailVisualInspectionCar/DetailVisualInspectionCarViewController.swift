@@ -36,19 +36,11 @@ final class DetailVisualInspectionCarViewController: BaseViewController<DetailVi
     override func setupBindingInput() {
         
         contentView.tapNextStepButtonPublisher
-            .bind(to: rx.openInternalInspectionCarBinding)
+            .subscribe(onNext: { print("Tab save button") })
             .disposed(by: disposeBag)
     }
 }
 
 // MARK: - Extension Reactive
 
-extension Reactive where Base: DetailVisualInspectionCarViewController {
-    
-    var openInternalInspectionCarBinding: Binder<Void> {
-        return Binder(base) { viewController, _ in
-            let internalInspectionCarViewController = AppContainer.shared.internalInspectionCarViewController
-            viewController.navigationController?.pushViewController(internalInspectionCarViewController, animated: true)
-        }
-    }
-}
+extension Reactive where Base: DetailVisualInspectionCarViewController { }

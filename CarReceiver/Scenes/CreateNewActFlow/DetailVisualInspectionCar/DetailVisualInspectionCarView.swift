@@ -17,17 +17,17 @@ final class DetailVisualInspectionCarView: BaseView {
     
     // MARK: - Ui elements
     
-    private lazy var nextStepButton = NextStepButton(setTitle: "Далее")
+    private lazy var saveButton = NextStepButton(setTitle: "Сохранить")
     
     // MARK: - Setup Layout
     
     override func setupHierarchy() {
-        self.addSubview(nextStepButton)
+        self.addSubview(saveButton)
     }
     
     override func setupLayout() {
         
-        nextStepButton.snp.makeConstraints {
+        saveButton.snp.makeConstraints {
             $0.bottom.equalTo(self.snp.bottom).offset(-50)
             $0.trailing.equalTo(-20)
             $0.width.equalTo(200)
@@ -39,7 +39,7 @@ final class DetailVisualInspectionCarView: BaseView {
     
     override func setupBindingOutput() {
         
-        nextStepButton.rx.tap
+        saveButton.rx.tap
             .bind(to: tapNextStepButtonPublisher)
             .disposed(by: disposeBag)
     }

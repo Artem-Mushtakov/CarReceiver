@@ -15,11 +15,10 @@ final class VisualInspectionCarView: BaseView {
     // MARK: - Properties
     
     var tapNextStepButtonPublisher = PublishSubject<Void>()
-
     var clearCarYesButtonPublisher = PublishSubject<Void>()
     var clearCarNoButtonPublisher = PublishSubject<Void>()
-
     var visualDataPublisher = PublishSubject<[SectionVisualInspectionCarModel]>()
+    var tapItemCollectionView = PublishSubject<IndexPath>()
     
     // MARK: - Ui element
 
@@ -110,6 +109,10 @@ final class VisualInspectionCarView: BaseView {
     override func setupBindingOutput() {
 
         collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+
+        collectionView.rx.itemSelected
+            .bind(to: tapItemCollectionView)
             .disposed(by: disposeBag)
 
         visualDataPublisher

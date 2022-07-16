@@ -15,6 +15,7 @@ final class FavoriteActsView: BaseView {
     // MARK: - Properties
 
     var favoriteDataPublisher = PublishSubject<[SectionFavoriteActsModel]>()
+    var tapItemCollectionView = PublishSubject<IndexPath>()
 
     // MARK: - Ui elements
 
@@ -65,6 +66,10 @@ final class FavoriteActsView: BaseView {
     override func setupBindingOutput() {
 
         collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+
+        collectionView.rx.itemSelected
+            .bind(to: tapItemCollectionView)
             .disposed(by: disposeBag)
 
         favoriteDataPublisher
